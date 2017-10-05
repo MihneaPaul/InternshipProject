@@ -1,0 +1,630 @@
+<?xml version="1.0"?>
+<dstCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ttCustomer>
+    <CustNum>2</CustNum>
+    <Country>Finland</Country>
+    <Name>Urpon Frisbee</Name>
+    <Address>Rattipolku 3</Address>
+    <Address2/>
+    <City>Oslo</City>
+    <State>Uusima</State>
+    <PostalCode>45321</PostalCode>
+    <Contact>Urpo Leppakoski</Contact>
+    <Phone>(603) 532 5471</Phone>
+    <SalesRep>DKP</SalesRep>
+    <CreditLimit>27600.00</CreditLimit>
+    <Balance>437.63</Balance>
+    <Terms>Net30</Terms>
+    <Discount>35</Discount>
+    <Comments>Ship all products 2nd Day Air.</Comments>
+    <Fax/>
+    <EmailAddress/>
+  </ttCustomer>
+  <ttCustomer>
+    <CustNum>3</CustNum>
+    <Country>USA</Country>
+    <Name>Hoops</Name>
+    <Address>Suite 415</Address>
+    <Address2>40 Grove St.</Address2>
+    <City>Atlanta</City>
+    <State>GA</State>
+    <PostalCode>02112</PostalCode>
+    <Contact>Michael Traitser</Contact>
+    <Phone>(617) 355-1557</Phone>
+    <SalesRep>HXM</SalesRep>
+    <CreditLimit>75000.00</CreditLimit>
+    <Balance>1199.95</Balance>
+    <Terms>Net30</Terms>
+    <Discount>10</Discount>
+    <Comments>This customer is now OFF credit hold.</Comments>
+    <Fax/>
+    <EmailAddress/>
+  </ttCustomer>
+  <ttCustomer>
+    <CustNum>4</CustNum>
+    <Country>United Kingdom</Country>
+    <Name>Go Fishing Ltd</Name>
+    <Address>Unit 2</Address>
+    <Address2>83 Ponders End Rd</Address2>
+    <City>Harrow</City>
+    <State>Middlesex</State>
+    <PostalCode>HA8 bbb</PostalCode>
+    <Contact>Alan Frogbrook</Contact>
+    <Phone>081 883 6827</Phone>
+    <SalesRep>SLS</SalesRep>
+    <CreditLimit>15000.00</CreditLimit>
+    <Balance>14235.14</Balance>
+    <Terms>Net30</Terms>
+    <Discount>10</Discount>
+    <Comments/>
+    <Fax/>
+    <EmailAddress/>
+  </ttCustomer>
+  <ttCustomer>
+    <CustNum>5</CustNum>
+    <Country>USA</Country>
+    <Name>Match Point Tennis</Name>
+    <Address>66 Homer Pl</Address>
+    <Address2>Address 2</Address2>
+    <City>Boston</City>
+    <State>Florida</State>
+    <PostalCode>02134</PostalCode>
+    <Contact>Robert Dorr</Contact>
+    <Phone>(817) 498-2801</Phone>
+    <SalesRep>JAL</SalesRep>
+    <CreditLimit>11000.00</CreditLimit>
+    <Balance>0.00</Balance>
+    <Terms>Net30</Terms>
+    <Discount>50</Discount>
+    <Comments/>
+    <Fax/>
+    <EmailAddress/>
+  </ttCustomer>
+  <ttCustomer>
+    <CustNum>6</CustNum>
+    <Country>United Kingdom</Country>
+    <Name>Fanatical Athletes</Name>
+    <Address>20 Bicep Bridge Rd</Address>
+    <Address2>Leyton</Address2>
+    <City>Montgomery</City>
+    <State>AL</State>
+    <PostalCode>48855</PostalCode>
+    <Contact>Andrew Strong</Contact>
+    <Phone>0224 692 903</Phone>
+    <SalesRep>SLS</SalesRep>
+    <CreditLimit>38900.00</CreditLimit>
+    <Balance>1202.66</Balance>
+    <Terms>Net30</Terms>
+    <Discount>0</Discount>
+    <Comments>Ship C.O.D. at all times.</Comments>
+    <Fax/>
+    <EmailAddress/>
+  </ttCustomer>
+  <ttOrder>
+    <Ordernum>21</Ordernum>
+    <CustNum>4</CustNum>
+    <OrderDate>1998-02-08</OrderDate>
+    <ShipDate>1998-02-13</ShipDate>
+    <PromiseDate>1998-02-13</PromiseDate>
+    <Carrier>Standard Mail</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>SLS</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>55</Ordernum>
+    <CustNum>3</CustNum>
+    <OrderDate>1997-09-22</OrderDate>
+    <ShipDate>1997-09-27</ShipDate>
+    <PromiseDate>1997-09-27</PromiseDate>
+    <Carrier>Standard Mail</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>HXM</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>59</Ordernum>
+    <CustNum>6</CustNum>
+    <OrderDate>1997-12-24</OrderDate>
+    <ShipDate>1997-12-29</ShipDate>
+    <PromiseDate>1997-12-29</PromiseDate>
+    <Carrier>Standard Mail</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>SLS</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>Visa</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>94</Ordernum>
+    <CustNum>2</CustNum>
+    <OrderDate>1997-10-04</OrderDate>
+    <ShipDate>1997-10-09</ShipDate>
+    <PromiseDate>1997-10-09</PromiseDate>
+    <Carrier>Standard Mail</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>DKP</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>Visa</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>125</Ordernum>
+    <CustNum>2</CustNum>
+    <OrderDate>1997-12-20</OrderDate>
+    <ShipDate>1997-12-25</ShipDate>
+    <PromiseDate>1997-12-25</PromiseDate>
+    <Carrier>FlyByNight Courier</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>DKP</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>130</Ordernum>
+    <CustNum>6</CustNum>
+    <OrderDate>1997-11-01</OrderDate>
+    <ShipDate>1998-05-19</ShipDate>
+    <PromiseDate>1997-11-06</PromiseDate>
+    <Carrier>Standard Mail</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>SLS</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>135</Ordernum>
+    <CustNum>6</CustNum>
+    <OrderDate>1997-11-25</OrderDate>
+    <ShipDate>1997-11-30</ShipDate>
+    <PromiseDate>1997-11-30</PromiseDate>
+    <Carrier>FlyByNight Courier</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>SLS</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>160</Ordernum>
+    <CustNum>3</CustNum>
+    <OrderDate>1997-12-05</OrderDate>
+    <ShipDate>1998-05-26</ShipDate>
+    <PromiseDate>1997-12-10</PromiseDate>
+    <Carrier>Walkers Delivery</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>HXM</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Partially Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>163</Ordernum>
+    <CustNum>3</CustNum>
+    <OrderDate>1997-09-12</OrderDate>
+    <ShipDate>1998-05-27</ShipDate>
+    <PromiseDate>1997-09-17</PromiseDate>
+    <Carrier>Standard Mail</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>HXM</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>Visa</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>165</Ordernum>
+    <CustNum>6</CustNum>
+    <OrderDate>1997-12-02</OrderDate>
+    <ShipDate>1997-12-07</ShipDate>
+    <PromiseDate>1997-12-07</PromiseDate>
+    <Carrier>Walkers Delivery</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>SLS</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>167</Ordernum>
+    <CustNum>3</CustNum>
+    <OrderDate>1998-01-01</OrderDate>
+    <ShipDate>1998-05-26</ShipDate>
+    <PromiseDate>1998-01-06</PromiseDate>
+    <Carrier>Standard Mail</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>HXM</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>Visa</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>171</Ordernum>
+    <CustNum>2</CustNum>
+    <OrderDate>1997-11-30</OrderDate>
+    <ShipDate>1998-07-27</ShipDate>
+    <PromiseDate>1997-12-05</PromiseDate>
+    <Carrier>Standard Mail</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>DKP</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>Master Card</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>189</Ordernum>
+    <CustNum>3</CustNum>
+    <OrderDate>1997-09-29</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1997-10-04</PromiseDate>
+    <Carrier>Standard Mail</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>HXM</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>Visa</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>1005</Ordernum>
+    <CustNum>5</CustNum>
+    <OrderDate>1998-03-04</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1998-03-09</PromiseDate>
+    <Carrier>Joe&apos;s Speedee Delivery</Carrier>
+    <Instructions>These are my instructions. Get it here on time!</Instructions>
+    <PO>1234</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>Web</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>1010</Ordernum>
+    <CustNum>5</CustNum>
+    <OrderDate>1997-10-12</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1997-10-17</PromiseDate>
+    <Carrier>Fedex Overnight</Carrier>
+    <Instructions>I need it now!</Instructions>
+    <PO>43332</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>Web</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>1015</Ordernum>
+    <CustNum>5</CustNum>
+    <OrderDate>1998-01-06</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1998-01-11</PromiseDate>
+    <Carrier>Joe&apos;s Speedee Delivery</Carrier>
+    <Instructions>I needed it yesterday!</Instructions>
+    <PO>1234566</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>Web</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>1045</Ordernum>
+    <CustNum>5</CustNum>
+    <OrderDate>1998-02-27</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1998-03-04</PromiseDate>
+    <Carrier>UPS Ground</Carrier>
+    <Instructions>Send &apos;em quick</Instructions>
+    <PO>9999009</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>Web</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>Visa</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>1050</Ordernum>
+    <CustNum>5</CustNum>
+    <OrderDate>1997-10-11</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1997-10-16</PromiseDate>
+    <Carrier>UPS Ground</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>Web</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>1355</Ordernum>
+    <CustNum>2</CustNum>
+    <OrderDate>1997-12-01</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1997-12-06</PromiseDate>
+    <Carrier>UPS Ground</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>Web</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>1375</Ordernum>
+    <CustNum>2</CustNum>
+    <OrderDate>1997-11-10</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1997-11-15</PromiseDate>
+    <Carrier>UPS Ground</Carrier>
+    <Instructions/>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>Web</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>Visa</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>1385</Ordernum>
+    <CustNum>5</CustNum>
+    <OrderDate>1998-01-10</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1998-01-15</PromiseDate>
+    <Carrier>UPS Ground</Carrier>
+    <Instructions>Deliver to the front office</Instructions>
+    <PO/>
+    <Terms>Net30</Terms>
+    <SalesRep>Web</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>6025</Ordernum>
+    <CustNum>5</CustNum>
+    <OrderDate>1998-02-16</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1998-02-21</PromiseDate>
+    <Carrier/>
+    <Instructions/>
+    <PO>PO0523976025</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>BBB</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>Master Card</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>6030</Ordernum>
+    <CustNum>4</CustNum>
+    <OrderDate>1998-02-03</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1998-02-08</PromiseDate>
+    <Carrier/>
+    <Instructions/>
+    <PO>PO0523976030</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>BBB</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>6035</Ordernum>
+    <CustNum>5</CustNum>
+    <OrderDate>1997-11-07</OrderDate>
+    <ShipDate>1997-11-12</ShipDate>
+    <PromiseDate>1997-11-12</PromiseDate>
+    <Carrier/>
+    <Instructions/>
+    <PO>PO0526976035</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>BBB</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Shipped</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>6040</Ordernum>
+    <CustNum>5</CustNum>
+    <OrderDate>1998-01-31</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1998-02-05</PromiseDate>
+    <Carrier/>
+    <Instructions/>
+    <PO>PO0530976040</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>BBB</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>6045</Ordernum>
+    <CustNum>5</CustNum>
+    <OrderDate>1997-12-26</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1997-12-31</PromiseDate>
+    <Carrier/>
+    <Instructions/>
+    <PO>PO0601976045</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>BBB</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>6060</Ordernum>
+    <CustNum>2</CustNum>
+    <OrderDate>1998-01-07</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1998-01-12</PromiseDate>
+    <Carrier/>
+    <Instructions/>
+    <PO>PO0604976060</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>BBB</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>6070</Ordernum>
+    <CustNum>2</CustNum>
+    <OrderDate>1997-11-17</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1997-11-22</PromiseDate>
+    <Carrier/>
+    <Instructions/>
+    <PO>PO0605976070</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>BBB</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>Master Card</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>6105</Ordernum>
+    <CustNum>5</CustNum>
+    <OrderDate>1998-02-12</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1998-02-17</PromiseDate>
+    <Carrier/>
+    <Instructions/>
+    <PO>PO0624976105</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>BBB</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>American Express</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>6125</Ordernum>
+    <CustNum>6</CustNum>
+    <OrderDate>1997-11-11</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1997-11-16</PromiseDate>
+    <Carrier/>
+    <Instructions/>
+    <PO>PO0703976125</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>BBB</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>Master Card</Creditcard>
+  </ttOrder>
+  <ttOrder>
+    <Ordernum>6150</Ordernum>
+    <CustNum>5</CustNum>
+    <OrderDate>1997-10-06</OrderDate>
+    <ShipDate xsi:nil="true"/>
+    <PromiseDate>1997-10-11</PromiseDate>
+    <Carrier/>
+    <Instructions/>
+    <PO>PO1013976150</PO>
+    <Terms>Net30</Terms>
+    <SalesRep>BBB</SalesRep>
+    <BillToID>0</BillToID>
+    <ShipToID>0</ShipToID>
+    <OrderStatus>Ordered</OrderStatus>
+    <WarehouseNum>0</WarehouseNum>
+    <Creditcard>Master Card</Creditcard>
+  </ttOrder>
+</dstCustomer>

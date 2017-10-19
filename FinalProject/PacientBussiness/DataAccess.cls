@@ -18,9 +18,7 @@ CLASS PacientBussiness.DataAccess ABSTRACT:
     constructor public DataAccess():
         super().
     end constructor.
-        
-    destructor public DataAccess():
-    end destructor. 
+         
             
     method public void fetchData(input-output hdsPacient as handle):
         define var bufferHandle as handle no-undo.

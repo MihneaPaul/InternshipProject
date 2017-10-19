@@ -36,6 +36,8 @@ CREATE WIDGET-POOL.
 
 /* Local Variable Definitions ---                                       */
 
+{dsPacient.i}
+
 /* _UIB-CODE-BLOCK-END */
 &ANALYZE-RESUME
 
@@ -47,12 +49,14 @@ CREATE WIDGET-POOL.
 &Scoped-define PROCEDURE-TYPE Window
 &Scoped-define DB-AWARE no
 
-/* Name of designated FRAME-NAME and/or first browse and/or first query */
+/* Name of first Frame and/or Browse and/or first Query                 */
 &Scoped-define FRAME-NAME DEFAULT-FRAME
 
 /* Standard List Definitions                                            */
-&Scoped-Define ENABLED-OBJECTS searchFill btnSearch SELECT-1 returnField 
-&Scoped-Define DISPLAYED-OBJECTS searchFill SELECT-1 returnField 
+&Scoped-Define ENABLED-OBJECTS fillFirstName fillLastName btnSubmit ~
+fillPhone fillEmail fillBirth 
+&Scoped-Define DISPLAYED-OBJECTS fillFirstName fillLastName fillPhone ~
+fillEmail fillBirth 
 
 /* Custom List Definitions                                              */
 /* List-1,List-2,List-3,List-4,List-5,List-6                            */
@@ -68,32 +72,45 @@ CREATE WIDGET-POOL.
 DEFINE VAR C-Win AS WIDGET-HANDLE NO-UNDO.
 
 /* Definitions of the field level widgets                               */
-DEFINE BUTTON btnSearch 
-    LABEL "Search" 
-    SIZE 15 BY 1.14
-    FONT 0.
+DEFINE BUTTON btnSubmit 
+    LABEL "Submit" 
+    SIZE 19 BY 1.91.
 
-DEFINE VARIABLE returnField AS CHARACTER FORMAT "X(256)":U 
+DEFINE VARIABLE fillBirth     AS DATE      FORMAT "99/99/9999":U 
+    LABEL "Date of Birth" 
     VIEW-AS FILL-IN 
-    SIZE 32 BY 2.19 NO-UNDO.
+    SIZE 22 BY 1 NO-UNDO.
 
-DEFINE VARIABLE searchFill  AS CHARACTER FORMAT "X(256)":U 
+DEFINE VARIABLE fillEmail     AS CHARACTER FORMAT "X(256)":U 
+    LABEL "E-mail" 
     VIEW-AS FILL-IN 
-    SIZE 30 BY 2.14
-    FONT 0 NO-UNDO.
+    SIZE 22 BY 1 NO-UNDO.
 
-DEFINE VARIABLE SELECT-1    AS CHARACTER 
-    VIEW-AS SELECTION-LIST SINGLE SCROLLBAR-VERTICAL 
-    SIZE 36 BY 5.95 NO-UNDO.
+DEFINE VARIABLE fillFirstName AS CHARACTER FORMAT "X(256)":U 
+    LABEL "First Name" 
+    VIEW-AS FILL-IN 
+    SIZE 22 BY 1 NO-UNDO.
+
+DEFINE VARIABLE fillLastName  AS CHARACTER FORMAT "X(256)":U 
+    LABEL "Last Name" 
+    VIEW-AS FILL-IN 
+    SIZE 22 BY 1 NO-UNDO.
+
+DEFINE VARIABLE fillPhone     AS CHARACTER FORMAT "X(256)":U 
+    LABEL "Phone" 
+    VIEW-AS FILL-IN 
+    SIZE 22 BY 1 NO-UNDO.
 
 
 /* ************************  Frame Definitions  *********************** */
 
 DEFINE FRAME DEFAULT-FRAME
-    searchFill AT ROW 1.48 COL 25 COLON-ALIGNED NO-LABEL WIDGET-ID 8
-    btnSearch AT ROW 4.81 COL 34 WIDGET-ID 4
-    SELECT-1 AT ROW 6.48 COL 24 NO-LABEL WIDGET-ID 10
-    returnField AT ROW 13.62 COL 24 COLON-ALIGNED NO-LABEL WIDGET-ID 6
+    fillFirstName AT ROW 2.91 COL 17 COLON-ALIGNED WIDGET-ID 2
+    fillLastName AT ROW 4.81 COL 17 COLON-ALIGNED WIDGET-ID 4
+    btnSubmit AT ROW 6.24 COL 47 WIDGET-ID 12
+    fillPhone AT ROW 6.71 COL 17 COLON-ALIGNED WIDGET-ID 6
+    fillEmail AT ROW 8.62 COL 17 COLON-ALIGNED WIDGET-ID 8
+    fillBirth AT ROW 10.52 COL 17 COLON-ALIGNED WIDGET-ID 10
     WITH 1 DOWN NO-BOX KEEP-TAB-ORDER OVERLAY 
     SIDE-LABELS NO-UNDERLINE THREE-D 
     AT COL 1 ROW 1
@@ -144,10 +161,7 @@ ELSE {&WINDOW-NAME} = CURRENT-WINDOW.
 /* SETTINGS FOR WINDOW C-Win
   VISIBLE,,RUN-PERSISTENT                                               */
 /* SETTINGS FOR FRAME DEFAULT-FRAME
-   FRAME-NAME                                                           */
-ASSIGN 
-    returnField:READ-ONLY IN FRAME DEFAULT-FRAME = TRUE.
-
+                                                                        */
 IF SESSION:DISPLAY-TYPE = "GUI":U AND VALID-HANDLE(C-Win)
     THEN C-Win:HIDDEN = no.
 
@@ -170,75 +184,7 @@ ON END-ERROR OF C-Win /* <insert window title> */
            application would exit. */
         IF THIS-PROCEDURE:PERSISTENT THEN RETURN NO-APPLY.
     END.
-    
-define variable cListItem        as character                  no-undo.
-define variable nameString       as character                  no-undo.
-define variable bePacient        as PacientBussiness.bePacient no-undo.
-define variable nameFirst        as character                  no-undo.
-define variable nameLast         as character                  no-undo.
-define variable finalStringValue as character                  no-undo.                             
-define variable hasSpaces        as logical                    no-undo.    
-bePacient = new PacientBussiness.bePacient().
 
-def var numEntries as integer no-undo init 1.
-
-on choose of btnSearch   
-    do: 
-        def var i as integer no-undo.
-        
-        do i = 1 to numEntries:
-            SELECT-1:DELETE (i).
-        end. 
-        /*    ASSIGN SELECT-1:LIST-ITEMS IN FRAME {&FRAME-NAME} = "".*/
-        
-        hasSpaces = index(left-trim(right-trim(searchFill:screen-value," ")," ")," ") <> 0.
-        if(hasSpaces) then 
-        do:
-            nameFirst = entry(1,searchFill:screen-value," ").
-            nameLast  = entry(2,searchFill:screen-value," ").
-
-            SELECT-1:LIST-ITEMS = bePacient:returnName(string(quoter(nameFirst)), string(quoter(nameLast))).                   
-            cListItem = SELECT-1:LIST-ITEMS.
-            numEntries = num-entries(SELECT-1).
-        end.
-        else 
-        do: 
-            SELECT-1:LIST-ITEMS = bePacient:returnName(string(quoter(searchFill:screen-value))).
-            cListItem = SELECT-1:LIST-ITEMS.
-            numEntries = num-entries(SELECT-1).
-        end.
-    /*    define variable comboNames as char no-undo*/
-    /*    view-as combo-box list-items SELECT-1.    */
-    /*         disp bePacient:returnName(string(searchFill:screen-value)).*/
-    
-    /*      SELECT-1:SCREEN-VALUE = string(bePacient:returnName(quoter(searchFill:screen-value))).*/
-    /*    returnField:screen-value = bePacient:returnEmail(quoter(searchFill:screen-value)).*/
-   
-    end.
-    
-def var iValuePosition as integer no-undo.
-def var cValue         as char    no-undo.
-def var cLabel         as char    no-undo.
-
-on value-changed of SELECT-1 in frame DEFAULT-FRAME 
-    do:    
-        cListItem = Select-1:list-items.
-        /*        MESSAGE "cListItems: " cListItem*/
-        /*            VIEW-AS ALERT-BOX.          */
-        cValue = SELECT-1:screen-value in frame {&FRAME-NAME}.
-        /*        MESSAGE "cValue: " cValue*/
-        /*            VIEW-AS ALERT-BOX.   */
-        iValuePosition = lookup(cValue, cListItem).
-        /*        MESSAGE "iValuePosition: " iValuePosition*/
-        /*            VIEW-AS ALERT-BOX.                   */
-        /*        iLabelPosition = iValuePosition - 1.    */
-        /*        MESSAGE "iLabelPosition " iLabelPosition*/
-        /*            VIEW-AS ALERT-BOX.                  */
-        cLabel = entry(iValuePosition, cListItem).
-
-        returnField:screen-value = bePacient:returnEmail(quoter(entry(1,cLabel," ")),quoter(entry(2,cLabel," "))).
-    end.
-    
 /* _UIB-CODE-BLOCK-END */
 &ANALYZE-RESUME
 
@@ -250,6 +196,50 @@ ON WINDOW-CLOSE OF C-Win /* <insert window title> */
         APPLY "CLOSE":U TO THIS-PROCEDURE.
         RETURN NO-APPLY.
     END.
+
+on choose of btnSubmit 
+    do:
+        
+        define variable hdsPacient as handle                     no-undo.
+        define variable daPacient  as PacientBussiness.daPacient no-undo.
+        define variable bePacient  as PacientBussiness.bePacient no-undo.
+        
+        bePacient = new PacientBussiness.bePacient().
+        daPacient = new PacientBussiness.daPacient().
+        
+        define query qPacient for Pacient scrolling.
+        define data-source srcPacient for query qPacient.
+        
+        hdsPacient = dataset dsPacient:handle.
+        
+        buffer ttPacient:attach-data-source(data-source srcPacient:handle).
+        /*        query qPacient:query-prepare("for each ttPacient").*/
+
+        daPacient:fetchData(hdsPacient).
+
+        temp-table ttPacient:tracking-changes = true.
+        create ttPacient no-error.
+
+       assign                                                
+           ttPacient.FirstName = fillFirstName:screen-value  
+           ttPacient.LastName  = fillLastName:screen-value   
+           ttPacient.Birth     = date(fillBirth:screen-value)
+           ttPacient.E-mail    = fillEmail:screen-value      
+           ttPacient.Phone     = fillPhone:screen-value.     
+           ttPacient.PacNum = NEXT-VALUE(NextPacNum).
+        define variable hChangeDataSet as handle no-undo.
+
+        hdsPacient = dataset dsPacient:handle.
+        create dataset hChangeDataSet.
+        hChangeDataSet:create-like(hdsPacient).
+        buffer ttPacient:attach-data-source(data-source srcPacient:handle).
+        for each btPacient no-lock:
+            buffer btPacient:save-row-changes().
+        end.
+        temp-table ttPacient:tracking-changes = false.    
+        hChangeDataSet:get-changes(hdsPacient,true).
+        
+    end.
 
 /* _UIB-CODE-BLOCK-END */
 &ANALYZE-RESUME
@@ -320,9 +310,9 @@ PROCEDURE enable_UI :
                    These statements here are based on the "Other 
                    Settings" section of the widget Property Sheets.
     ------------------------------------------------------------------------------*/
-    DISPLAY searchFill SELECT-1 returnField 
+    DISPLAY fillFirstName fillLastName fillPhone fillEmail fillBirth 
         WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
-    ENABLE searchFill btnSearch SELECT-1 returnField 
+    ENABLE fillFirstName fillLastName btnSubmit fillPhone fillEmail fillBirth 
         WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
     {&OPEN-BROWSERS-IN-QUERY-DEFAULT-FRAME}
     VIEW C-Win.

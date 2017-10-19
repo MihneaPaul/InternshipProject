@@ -104,8 +104,6 @@ CLASS PacientBussiness.bePacient:
         daPacient:fetchData(hdsPacient, fullFilter).
         /*        daPacient:fetchData(hdsPacient, fullFilter2).*/        
         hdsPacientBuffer = hdsPacient:get-buffer-handle("ttPacient").
-        /*        MESSAGE 2         */
-        /*        VIEW-AS ALERT-BOX.*/
         create query dqPacient.
         /*        create query dq2Pacient.*/
         dqPacient:set-buffers(hdsPacientBuffer).
@@ -118,17 +116,48 @@ CLASS PacientBussiness.bePacient:
         
         /*        MESSAGE 3         */
         /*        VIEW-AS ALERT-BOX.*/
-        
         dqPacient:get-first().
-        repeat:
-            if dqPacient:query-off-end then leave.
-            else 
-            do: 
-                dqPacient:get-next().
-                return string(hdsPacientBuffer::E-mail).
-            end.
-        end.
-        
+
+        repeat: 
+                dqPacient:get-current().
+                if dqPacient:query-off-end then leave.  
+            return string(hdsPacientBuffer::E-mail).
+          
+        end. 
     end method.
+    
+    method public character returnNameByEmail(input filterEmail as char): 
+      
+        define var dqPacient        as handle no-undo.
+        define var hdsPacientBuffer as handle no-undo.
+        define var tableNameString  as char   no-undo.
+        define var fullFilter       as char   no-undo.
+        define var returnString     as char   no-undo.
+        define var mailName         as char   no-undo.
+        
+        fullFilter = "ttPacient.E-Mail = " + quoter(filterEmail).
+        daPacient:fetchData(hdsPacient, fullFilter).
+        hdsPacientBuffer = hdsPacient:get-buffer-handle("ttPacient").
+        create query dqPacient.
+        dqPacient:set-buffers(hdsPacientBuffer).
+        dqPacient:query-prepare("for each ttPacient where " + fullFilter).
+        dqPacient:query-open(). 
+
+        dqPacient:get-first().
+       
+        repeat:
+            if dqPacient:query-off-end then leave.     
+            else 
+            do:
+                mailName = string(hdsPacientBuffer::FirstName) + " " + string(hdsPacientBuffer::LastName).                     
+                return mailName.
+            end.
+        end.   
+    end method.
+    
+    // TODO
+    method public void deletePacient(input firstName as char, input lastName as char, input mail as character):
+        end method.
+    
 
 END CLASS.

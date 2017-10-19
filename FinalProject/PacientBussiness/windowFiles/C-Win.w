@@ -264,30 +264,28 @@ on value-changed of selectEmail in frame DEFAULT-FRAME
                 
                 // TODO!!
                 
-/*                MESSAGE "You have chosen to delete" useFirstName useLastName + "." SKIP(1)*/
-/*                    "Do you really want to delete this Pacient?"                          */
-/*                    VIEW-AS ALERT-BOX QUESTION BUTTONS YES-NO-CANCEL                      */
-/*                    TITLE "" UPDATE lChoice AS LOGICAL.                                   */
-/*                CASE lChoice:                                                             */
-/*                    WHEN TRUE THEN /* Yes */                                              */
-/*                        DO:                                                               */
-/*                            FIND Customer WHERE Customer.Name = cust-list:SCREEN-VALUE    */
-/*                                EXCLUSIVE-LOCK.                                           */
-/*                            DELETE Customer.                                              */
-/*                        END.                                                              */
-/*                    WHEN FALSE THEN /* No */                                              */
-/*                        DO:                                                               */
-/*                            MESSAGE "Deletion canceled."                                  */
-/*                                VIEW-AS ALERT-BOX INFORMATION BUTTONS OK.                 */
-/*                            RETURN NO-APPLY.                                              */
-/*                        END.                                                              */
-/*                    OTHERWISE /* Cancel */                                                */
-/*                    STOP.                                                                 */
-/*                END CASE.                                                                 */
-/*            END.                                                                          */
+                MESSAGE "You have chosen to delete" useFirstName useLastName + "." SKIP(1)
+                    "Do you really want to delete this Pacient?"
+                    VIEW-AS ALERT-BOX QUESTION BUTTONS YES-NO-CANCEL
+                    TITLE "" UPDATE lChoice AS LOGICAL.
+                CASE lChoice:
+                    WHEN TRUE THEN /* Yes */
+                        DO:
+                            bePacient:deletePacient(useFirstName, useLastName, useEmail).
+                        END.
+                    WHEN FALSE THEN /* No */
+                        DO:
+                            MESSAGE "Deletion canceled."
+                                VIEW-AS ALERT-BOX INFORMATION BUTTONS OK.
+                            RETURN NO-APPLY.
+                        END.
+                    OTHERWISE /* Cancel */
+                    STOP.
+                END CASE.
+            END.
     /*                run Delete.w(input useEmail).*/
     end.
-    end.
+
 
 /* _UIB-CODE-BLOCK-END */
 &ANALYZE-RESUME

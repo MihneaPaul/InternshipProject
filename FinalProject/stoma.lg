@@ -2874,3 +2874,42 @@
 [2017/10/19@13:10:29.151+0300] P-6140       T-5936  I SRV     4: (739)   Logout usernum 21, userid demo, on CJ1439-lap. 
 [2017/10/19@14:39:45.757+0300] P-10500      T-7600  I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
 [2017/10/19@14:39:46.340+0300] P-7828       T-8664  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/19@14:54:12.165+0300] P-7828       T-8664  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/19@14:54:12.165+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@14:54:12.165+0300] P-7828       T-8664  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/19@14:54:12.181+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@14:54:43.318+0300] P-7828       T-8664  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/19@14:57:21.597+0300] P-7828       T-8664  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/19@14:57:21.597+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@14:57:21.597+0300] P-7828       T-8664  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/19@14:57:21.605+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@14:59:55.686+0300] P-7828       T-8664  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/19@15:13:12.993+0300] P-7828       T-8664  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/19@15:13:12.993+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@15:13:12.993+0300] P-7828       T-8664  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/19@15:13:13.008+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@15:13:14.317+0300] P-7828       T-8664  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/19@15:13:20.752+0300] P-7828       T-8664  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/19@15:13:20.752+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@15:13:20.752+0300] P-7828       T-8664  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/19@15:13:20.760+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@15:13:44.305+0300] P-7828       T-8664  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/19@15:14:59.783+0300] P-7828       T-8664  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/19@15:14:59.783+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@15:14:59.783+0300] P-7828       T-8664  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/19@15:14:59.791+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@15:15:41.677+0300] P-7828       T-8664  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/19@15:16:15.745+0300] P-7828       T-8664  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/19@15:16:15.745+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@15:16:15.745+0300] P-7828       T-8664  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/19@15:16:15.753+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@15:16:42.956+0300] P-7828       T-8664  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/19@15:17:56.434+0300] P-7828       T-8664  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/19@15:17:56.434+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@15:17:56.434+0300] P-7828       T-8664  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/19@15:17:56.442+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@15:18:34.317+0300] P-7828       T-8664  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/19@15:20:11.272+0300] P-7828       T-8664  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/19@15:20:11.272+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/19@15:20:11.272+0300] P-7828       T-8664  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/19@15:20:11.281+0300] P-7828       T-8664  I SRV     2: (7129)  Usr 23 set name to demo. 

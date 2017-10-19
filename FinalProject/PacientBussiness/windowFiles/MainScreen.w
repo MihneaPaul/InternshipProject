@@ -50,7 +50,7 @@ CREATE WIDGET-POOL.
 &Scoped-define PROCEDURE-TYPE Window
 &Scoped-define DB-AWARE no
 
-/* Name of first Frame and/or Browse and/or first Query                 */
+/* Name of designated FRAME-NAME and/or first browse and/or first query */
 &Scoped-define FRAME-NAME DEFAULT-FRAME
 &Scoped-define BROWSE-NAME BROWSE-2
 
@@ -72,7 +72,7 @@ Pacient.LastName Pacient.E-mail Pacient.Phone Pacient.Birth
     ~{&OPEN-QUERY-BROWSE-2}
 
 /* Standard List Definitions                                            */
-&Scoped-Define ENABLED-OBJECTS btnManageDB BROWSE-2 
+&Scoped-Define ENABLED-OBJECTS btnManageDB btnRefresh BROWSE-2 
 
 /* Custom List Definitions                                              */
 /* List-1,List-2,List-3,List-4,List-5,List-6                            */
@@ -95,6 +95,13 @@ DEFINE BUTTON btnManageDB
      LABEL "Button 7" 
      SIZE 8 BY 1.91.
 
+DEFINE BUTTON btnRefresh 
+     IMAGE-UP FILE "C:/Users/Demo/Downloads/cloud_refresh.ico":U
+     IMAGE-DOWN FILE "C:/Users/Demo/Downloads/cloud_refresh.ico":U
+     IMAGE-INSENSITIVE FILE "C:/Users/Demo/Downloads/cloud_refresh.ico":U
+     LABEL "Refresh" 
+     SIZE 8 BY 1.91.
+
 /* Query definitions                                                    */
 &ANALYZE-SUSPEND
 DEFINE QUERY BROWSE-2 FOR 
@@ -113,18 +120,22 @@ DEFINE BROWSE BROWSE-2
       Pacient.Birth FORMAT "99/99/99":U
 /* _UIB-CODE-BLOCK-END */
 &ANALYZE-RESUME
-    WITH NO-ROW-MARKERS SEPARATORS SIZE 80 BY 13.81 FIT-LAST-COLUMN.
+    WITH NO-ROW-MARKERS SEPARATORS SIZE 114 BY 13.81 FIT-LAST-COLUMN.
 
 
 /* ************************  Frame Definitions  *********************** */
 
 DEFINE FRAME DEFAULT-FRAME
-     btnManageDB AT ROW 1.24 COL 36 WIDGET-ID 2
+     btnManageDB AT ROW 1.24 COL 56 WIDGET-ID 2
+     btnRefresh AT ROW 1.24 COL 85 WIDGET-ID 6
      BROWSE-2 AT ROW 3.14 COL 1 WIDGET-ID 200
+     "Manage Database" VIEW-AS TEXT
+          SIZE 19 BY 1.91 AT ROW 1.24 COL 37 WIDGET-ID 4
+          FGCOLOR 12 
     WITH 1 DOWN NO-BOX KEEP-TAB-ORDER OVERLAY 
          SIDE-LABELS NO-UNDERLINE THREE-D 
          AT COL 1 ROW 1
-         SIZE 80 BY 16 WIDGET-ID 100.
+         SIZE 114.8 BY 16 WIDGET-ID 100.
 
 
 /* *********************** Procedure Settings ************************ */
@@ -145,11 +156,11 @@ IF SESSION:DISPLAY-TYPE = "GUI":U THEN
          HIDDEN             = YES
          TITLE              = "<insert window title>"
          HEIGHT             = 16
-         WIDTH              = 80
+         WIDTH              = 114.8
          MAX-HEIGHT         = 16
-         MAX-WIDTH          = 80
+         MAX-WIDTH          = 147.8
          VIRTUAL-HEIGHT     = 16
-         VIRTUAL-WIDTH      = 80
+         VIRTUAL-WIDTH      = 147.8
          RESIZE             = yes
          SCROLL-BARS        = no
          STATUS-AREA        = no
@@ -171,8 +182,8 @@ ELSE {&WINDOW-NAME} = CURRENT-WINDOW.
 /* SETTINGS FOR WINDOW C-Win
   VISIBLE,,RUN-PERSISTENT                                               */
 /* SETTINGS FOR FRAME DEFAULT-FRAME
-                                                                        */
-/* BROWSE-TAB BROWSE-2 btnManageDB DEFAULT-FRAME */
+   FRAME-NAME                                                           */
+/* BROWSE-TAB BROWSE-2 btnRefresh DEFAULT-FRAME */
 IF SESSION:DISPLAY-TYPE = "GUI":U AND VALID-HANDLE(C-Win)
 THEN C-Win:HIDDEN = no.
 
@@ -205,15 +216,23 @@ THEN C-Win:HIDDEN = no.
 &Scoped-define SELF-NAME C-Win
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL C-Win C-Win
 ON END-ERROR OF C-Win /* <insert window title> */
-OR ENDKEY OF {&WINDOW-NAME} ANYWHERE DO:
-  /* This case occurs when the user presses the "Esc" key.
-     In a persistently run window, just ignore this.  If we did not, the
-     application would exit. */
-  IF THIS-PROCEDURE:PERSISTENT THEN RETURN NO-APPLY.
-END.
+OR ENDKEY OF {&WINDOW-NAME} ANYWHERE 
+    DO:
+        /* This case occurs when the user presses the "Esc" key.
+           In a persistently run window, just ignore this.  If we did not, the
+           application would exit. */
+        IF THIS-PROCEDURE:PERSISTENT THEN RETURN NO-APPLY.
+    END.
 
-on choose of btnManageDB do:
-    run CRUD.w.
+on choose of btnManageDB 
+    do:
+        run CRUD.w.
+    end.
+
+on choose of btnRefresh 
+    do:
+        BROWSE BROWSE-2:REFRESH().
+        {&OPEN-QUERY-{&BROWSE-NAME}}
     end.
 
 /* _UIB-CODE-BLOCK-END */
@@ -223,10 +242,10 @@ on choose of btnManageDB do:
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL C-Win C-Win
 ON WINDOW-CLOSE OF C-Win /* <insert window title> */
 DO:
-  /* This event will close the window and terminate the procedure.  */
-  APPLY "CLOSE":U TO THIS-PROCEDURE.
-  RETURN NO-APPLY.
-END.
+        /* This event will close the window and terminate the procedure.  */
+        APPLY "CLOSE":U TO THIS-PROCEDURE.
+        RETURN NO-APPLY.
+    END.
 
 /* _UIB-CODE-BLOCK-END */
 &ANALYZE-RESUME
@@ -247,7 +266,7 @@ ASSIGN CURRENT-WINDOW                = {&WINDOW-NAME}
 /* The CLOSE event can be used from inside or outside the procedure to  */
 /* terminate it.                                                        */
 ON CLOSE OF THIS-PROCEDURE 
-   RUN disable_UI.
+    RUN disable_UI.
 
 /* Best default for GUI applications is...                              */
 PAUSE 0 BEFORE-HIDE.
@@ -256,10 +275,10 @@ PAUSE 0 BEFORE-HIDE.
 /* (NOTE: handle ERROR and END-KEY so cleanup code will always fire.    */
 MAIN-BLOCK:
 DO ON ERROR   UNDO MAIN-BLOCK, LEAVE MAIN-BLOCK
-   ON END-KEY UNDO MAIN-BLOCK, LEAVE MAIN-BLOCK:
-  RUN enable_UI.
-  IF NOT THIS-PROCEDURE:PERSISTENT THEN
-    WAIT-FOR CLOSE OF THIS-PROCEDURE.
+    ON END-KEY UNDO MAIN-BLOCK, LEAVE MAIN-BLOCK:
+    RUN enable_UI.
+    IF NOT THIS-PROCEDURE:PERSISTENT THEN
+        WAIT-FOR CLOSE OF THIS-PROCEDURE.
 END.
 
 /* _UIB-CODE-BLOCK-END */
@@ -298,7 +317,7 @@ PROCEDURE enable_UI :
                These statements here are based on the "Other 
                Settings" section of the widget Property Sheets.
 ------------------------------------------------------------------------------*/
-  ENABLE btnManageDB BROWSE-2 
+  ENABLE btnManageDB btnRefresh BROWSE-2 
       WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
   {&OPEN-BROWSERS-IN-QUERY-DEFAULT-FRAME}
   VIEW C-Win.

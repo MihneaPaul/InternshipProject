@@ -51,10 +51,8 @@ define input parameter chooseOpen as integer no-undo.
 &Scoped-define FRAME-NAME DEFAULT-FRAME
 
 /* Standard List Definitions                                            */
-&Scoped-Define ENABLED-OBJECTS searchFill returnField btnSearch SELECT-1 ~
-selectEmail 
-&Scoped-Define DISPLAYED-OBJECTS searchFill returnField SELECT-1 ~
-selectEmail 
+&Scoped-Define ENABLED-OBJECTS searchFill btnSearch SELECT-1 selectEmail 
+&Scoped-Define DISPLAYED-OBJECTS searchFill SELECT-1 selectEmail 
 
 /* Custom List Definitions                                              */
 /* List-1,List-2,List-3,List-4,List-5,List-6                            */
@@ -75,11 +73,8 @@ DEFINE BUTTON btnSearch
     SIZE 15 BY 1.14
     FONT 0.
 
-DEFINE VARIABLE returnField AS CHARACTER FORMAT "X(256)":U 
-    VIEW-AS FILL-IN 
-    SIZE 18 BY 2.19 NO-UNDO.
-
 DEFINE VARIABLE searchFill  AS CHARACTER FORMAT "X(256)":U 
+    LABEL "Search by Name" 
     VIEW-AS FILL-IN 
     SIZE 30 BY 2.14
     FONT 0 NO-UNDO.
@@ -96,8 +91,7 @@ DEFINE VARIABLE selectEmail AS CHARACTER
 /* ************************  Frame Definitions  *********************** */
 
 DEFINE FRAME DEFAULT-FRAME
-    searchFill AT ROW 1.48 COL 25 COLON-ALIGNED NO-LABEL WIDGET-ID 8
-    returnField AT ROW 3.86 COL 6 NO-LABEL WIDGET-ID 6
+    searchFill AT ROW 1.48 COL 25 COLON-ALIGNED WIDGET-ID 8
     btnSearch AT ROW 4.81 COL 34 WIDGET-ID 4
     SELECT-1 AT ROW 6.48 COL 24 NO-LABEL WIDGET-ID 10
     selectEmail AT ROW 14.33 COL 24 NO-LABEL WIDGET-ID 12
@@ -152,11 +146,6 @@ ELSE {&WINDOW-NAME} = CURRENT-WINDOW.
   VISIBLE,,RUN-PERSISTENT                                               */
 /* SETTINGS FOR FRAME DEFAULT-FRAME
    FRAME-NAME                                                           */
-/* SETTINGS FOR FILL-IN returnField IN FRAME DEFAULT-FRAME
-   ALIGN-L                                                              */
-ASSIGN 
-    returnField:READ-ONLY IN FRAME DEFAULT-FRAME = TRUE.
-
 IF SESSION:DISPLAY-TYPE = "GUI":U AND VALID-HANDLE(C-Win)
     THEN C-Win:HIDDEN = no.
 
@@ -209,17 +198,42 @@ on choose of btnSearch
             nameLast  = entry(2,searchFill:screen-value," ").
 
             SELECT-1:LIST-ITEMS = bePacient:returnName(string(quoter(nameFirst)), string(quoter(nameLast))). 
-            useFirstName = entry(1,SELECT-1:SCREEN-VALUE," ").
-            useLastName  = entry(2,SELECT-1:SCREEN-VALUE," ").
-                            
-            cListItem = SELECT-1:LIST-ITEMS.
-            numEntries = num-entries(SELECT-1).
+            if SELECT-1:num-items = 0 then
+            do:
+                MESSAGE "No Pacient with this name available."
+                    VIEW-AS ALERT-BOX.
+            end.
+            else
+            do:
+    
+                useFirstName = entry(1,searchFill:SCREEN-VALUE," ").
+                useLastName  = entry(2,searchFill:SCREEN-VALUE," ").              
+                cListItem = SELECT-1:LIST-ITEMS.
+            /*                numEntries = num-items(SELECT-1).*/
+            /*                        MESSAGE SELECT-1:num-items*/
+            /*            VIEW-AS ALERT-BOX.                    */
+            end.
         end.
         else 
         do: 
             SELECT-1:LIST-ITEMS = bePacient:returnName(string(quoter(searchFill:screen-value))).
-            cListItem = SELECT-1:LIST-ITEMS.
-            numEntries = num-entries(SELECT-1).
+            if SELECT-1:num-items = 0 then
+            do:
+                MESSAGE "No Pacient with this name available."
+                    VIEW-AS ALERT-BOX.
+            end.
+            else
+            do:
+      
+                
+                useFirstName = entry(1,searchFill:SCREEN-VALUE," ").
+                /*            useLastName  = entry(2,searchFill:SCREEN-VALUE," ").*/
+
+                cListItem = SELECT-1:LIST-ITEMS.
+            /*                numEntries = num-entries(SELECT-1).*/
+            /*                      MESSAGE SELECT-1:num-items*/
+            /*            VIEW-AS ALERT-BOX.                  */
+            end.
         end.
     /*    define variable comboNames as char no-undo*/
     /*    view-as combo-box list-items SELECT-1.    */
@@ -271,7 +285,7 @@ on value-changed of selectEmail in frame DEFAULT-FRAME
                 CASE lChoice:
                     WHEN TRUE THEN /* Yes */
                         DO:
-                            bePacient:deletePacient(useFirstName, useLastName, useEmail).
+                            bePacient:deletePacient(useFirstName, useEmail).
                         END.
                     WHEN FALSE THEN /* No */
                         DO:
@@ -285,7 +299,6 @@ on value-changed of selectEmail in frame DEFAULT-FRAME
             END.
     /*                run Delete.w(input useEmail).*/
     end.
-
 
 /* _UIB-CODE-BLOCK-END */
 &ANALYZE-RESUME
@@ -368,9 +381,9 @@ PROCEDURE enable_UI :
                    These statements here are based on the "Other 
                    Settings" section of the widget Property Sheets.
     ------------------------------------------------------------------------------*/
-    DISPLAY searchFill returnField SELECT-1 selectEmail 
+    DISPLAY searchFill SELECT-1 selectEmail 
         WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
-    ENABLE searchFill returnField btnSearch SELECT-1 selectEmail 
+    ENABLE searchFill btnSearch SELECT-1 selectEmail 
         WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
     {&OPEN-BROWSERS-IN-QUERY-DEFAULT-FRAME}
     VIEW C-Win.

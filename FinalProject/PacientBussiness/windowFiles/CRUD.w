@@ -37,6 +37,7 @@ CREATE WIDGET-POOL.
 /* Local Variable Definitions ---                                      */
 define variable chooseUpdate as integer init 0 no-undo.
 define variable chooseDelete as integer init 1 no-undo.
+
 /* _UIB-CODE-BLOCK-END */
 &ANALYZE-RESUME
 
@@ -216,6 +217,7 @@ PAUSE 0 BEFORE-HIDE.
 /* Now enable the interface and wait for the exit condition.            */
 /* (NOTE: handle ERROR and END-KEY so cleanup code will always fire.    */
 MAIN-BLOCK:
+  
 DO ON ERROR   UNDO MAIN-BLOCK, LEAVE MAIN-BLOCK
     ON END-KEY UNDO MAIN-BLOCK, LEAVE MAIN-BLOCK:
     RUN enable_UI.

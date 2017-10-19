@@ -213,20 +213,28 @@ on choose of btnSubmit
         hdsPacient = dataset dsPacient:handle.
         
         buffer ttPacient:attach-data-source(data-source srcPacient:handle).
-        /*        query qPacient:query-prepare("for each ttPacient").*/
-
         daPacient:fetchData(hdsPacient).
 
         temp-table ttPacient:tracking-changes = true.
         create ttPacient no-error.
 
-       assign                                                
-           ttPacient.FirstName = fillFirstName:screen-value  
-           ttPacient.LastName  = fillLastName:screen-value   
-           ttPacient.Birth     = date(fillBirth:screen-value)
-           ttPacient.E-mail    = fillEmail:screen-value      
-           ttPacient.Phone     = fillPhone:screen-value.     
-           ttPacient.PacNum = NEXT-VALUE(NextPacNum).
+        assign                                                
+            ttPacient.FirstName = fillFirstName:screen-value  
+            ttPacient.LastName  = fillLastName:screen-value   
+            ttPacient.Birth     = date(fillBirth:screen-value)
+            ttPacient.E-mail    = fillEmail:screen-value      
+            ttPacient.Phone     = fillPhone:screen-value.     
+        ttPacient.PacNum = NEXT-VALUE(NextPacNum).
+           
+        if(ttPacient.E-mail = "") then 
+        do:
+            define variable pacNumForMail as integer   no-undo.
+            define variable fullEmail     as character no-undo.
+               
+            pacNumForMail = ttPacient.PacNum.
+            fullEmail = string(pacNumForMail) + "mockEmail@test.com".
+            ttPacient.E-mail = fullEmail.
+        end.
         define variable hChangeDataSet as handle no-undo.
 
         hdsPacient = dataset dsPacient:handle.
@@ -239,6 +247,9 @@ on choose of btnSubmit
         temp-table ttPacient:tracking-changes = false.    
         hChangeDataSet:get-changes(hdsPacient,true).
         
+        MESSAGE "Entry added"
+        VIEW-AS ALERT-BOX.
+
     end.
 
 /* _UIB-CODE-BLOCK-END */

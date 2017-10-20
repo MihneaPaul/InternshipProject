@@ -3217,3 +3217,479 @@
 [2017/10/19@18:40:14.767+0300] P-11072      T-8864  I SRV     1: (7129)  Usr 24 set name to demo. 
 [2017/10/19@18:40:14.767+0300] P-11072      T-8864  I SRV     1: (17961) User 24 set tty to CJ1439-lap. 
 [2017/10/19@18:40:14.791+0300] P-11072      T-8864  I SRV     1: (7129)  Usr 24 set name to demo. 
+[2017/10/19@18:44:36.016+0300] P-11072      T-8864  I SRV     1: (739)   Logout usernum 24, userid demo, on CJ1439-lap. 
+
+                Fri Oct 20 10:11:03 2017
+[2017/10/20@10:11:03.214+0300] P-4300       T-10836 I BROKER  0: (333)   Multi-user session begin. 
+[2017/10/20@10:11:03.216+0300] P-4300       T-10836 I BROKER  0: (5326)  Begin Physical Redo Phase at 0 . 
+[2017/10/20@10:11:03.223+0300] P-4300       T-10836 I BROKER  0: (7161)  Physical Redo Phase Completed at blk 14 off 1774 upd 300. 
+[2017/10/20@10:11:03.223+0300] P-4300       T-10836 I BROKER  0: (13547) At end of Physical redo, transaction table size is 128. 
+[2017/10/20@10:11:03.237+0300] P-4300       T-10836 I BROKER  0: (452)   Login by demo on batch. 
+[2017/10/20@10:11:03.239+0300] P-4300       T-10836 I BROKER  0: (4393)  This server is licensed for local logins only. 
+[2017/10/20@10:11:03.249+0300] P-4300       T-10836 I BROKER  0: (5644)  Started for 12778 using TCP IPV4 address 127.0.0.1, pid 4300. 
+[2017/10/20@10:11:03.250+0300] P-4300       T-10836 I BROKER  0: (4234)  Progress OpenEdge Release 11.7 build 1388 on WINNT . 
+[2017/10/20@10:11:03.250+0300] P-4300       T-10836 I BROKER  0: (4281)  Server started by demo on batch. 
+[2017/10/20@10:11:03.250+0300] P-4300       T-10836 I BROKER  0: (6574)  Started using pid: 4300. 
+[2017/10/20@10:11:03.252+0300] P-4300       T-10836 I BROKER  0: (15219) Encryption enabled: 0 
+[2017/10/20@10:11:03.252+0300] P-4300       T-10836 I BROKER  0: (15824) Multi-tenancy enabled: 0 
+[2017/10/20@10:11:03.252+0300] P-4300       T-10836 I BROKER  0: (15824) Table Partitioning enabled: 0 
+[2017/10/20@10:11:03.252+0300] P-4300       T-10836 I BROKER  0: (15824) Authentication Gateway enabled: 0 
+[2017/10/20@10:11:03.253+0300] P-4300       T-10836 I BROKER  0: (-----) LRU mechanism enabled.
+[2017/10/20@10:11:03.253+0300] P-4300       T-10836 I BROKER  0: (4282)  Parameter File: Not Enabled. 
+[2017/10/20@10:11:03.254+0300] P-4300       T-10836 I BROKER  0: (9336)  Created shared memory with segment_id: 1 
+[2017/10/20@10:11:03.254+0300] P-4300       T-10836 I BROKER  0: (4250)  Before-Image Cluster Size: 524288. 
+[2017/10/20@10:11:03.254+0300] P-4300       T-10836 I BROKER  0: (4251)  Before-Image Block Size: 8192. 
+[2017/10/20@10:11:03.255+0300] P-4300       T-10836 I BROKER  0: (13873) After-image Management Archival Directory List (-aiarcdir): Not Enabled 
+[2017/10/20@10:11:03.255+0300] P-4300       T-10836 I BROKER  0: (13874) Create After-image Management Archival Directory(s) (-aiarcdircreate): Not Enabled 
+[2017/10/20@10:11:03.255+0300] P-4300       T-10836 I BROKER  0: (13872) After-image Management Archival Interval (-aiarcinterval): -1 
+[2017/10/20@10:11:03.256+0300] P-4300       T-10836 I BROKER  0: (4256)  Number of After-Image Buffers (-aibufs): 20 
+[2017/10/20@10:11:03.256+0300] P-4300       T-10836 I BROKER  0: (4254)  After-Image Stall (-aistall): Not Enabled 
+[2017/10/20@10:11:03.256+0300] P-4300       T-10836 I BROKER  0: (17555) Starting index number for statistics range (-baseindex): 1 
+[2017/10/20@10:11:03.256+0300] P-4300       T-10836 I BROKER  0: (17554) Starting table number for statistics range (-basetable): 1 
+[2017/10/20@10:11:03.256+0300] P-4300       T-10836 I BROKER  0: (18406) Starting index number per user for statistics range (-baseuserindex): 1 
+[2017/10/20@10:11:03.258+0300] P-4300       T-10836 I BROKER  0: (18404) Starting table number per user for statistics range (-baseusertable): 1 
+[2017/10/20@10:11:03.258+0300] P-4300       T-10836 I BROKER  0: (4252)  Number of Before-Image Buffers (-bibufs): 20 
+[2017/10/20@10:11:03.258+0300] P-4300       T-10836 I BROKER  0: (6552)  BI File Threshold Stall (-bistall): Disabled. 
+[2017/10/20@10:11:03.258+0300] P-4300       T-10836 I BROKER  0: (9238)  BI File Threshold size (-bithold): 0.0   Bytes 
+[2017/10/20@10:11:03.258+0300] P-4300       T-10836 I BROKER  0: (6573)  Database Blocksize (-blocksize): 4096 
+[2017/10/20@10:11:03.258+0300] P-4300       T-10836 I BROKER  0: (12812) BIW writer delay (-bwdelay): 0 
+[2017/10/20@10:11:03.258+0300] P-4300       T-10836 I BROKER  0: (12813) Allowed index cursors (-c): 84 
+[2017/10/20@10:11:03.258+0300] P-4300       T-10836 I BROKER  0: (18495) CDC cache size (-cdcsize): 200k bytes 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (12265) SSL Certificate Store Path (-certstorepath): Not Enabled 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (4264)  Character Set (-cpinternal): ISO8859-1 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (4235)  Physical Database Name (-db): D:/workspace/FinalProject/stoma 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (18558) Diagnostic directory (-diagDir): Not Enabled 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (18576) Diagnostic events value (-diagEvent): LockTable:0,BiThold:0,SysErr:0 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (18560) Diagnostic event level (-diagEvtLevel): 0 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (18561) Diagnostic field separator (-diagFS): ' ' 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (18579) Diagnostic data format (-diagFormat): csv 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (18562) Diagnostic pause length (-diagPause): 0 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (18563) Diagnostic prefix value (-diagPrefix): diagEvent_ 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (18580) Diagnostic procedure (-diagProc): Not Enabled 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (4238)  Direct I/O (-directio): Not Enabled 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (4236)  Database Type (-dt): PROGRESS 
+[2017/10/20@10:11:03.259+0300] P-4300       T-10836 I BROKER  0: (15218) Encryption cache size (-ecsize): 1000 
+[2017/10/20@10:11:03.260+0300] P-4300       T-10836 I BROKER  0: (12814) Group delay (-groupdelay): 10 
+[2017/10/20@10:11:03.260+0300] P-4300       T-10836 I BROKER  0: (4242)  Hash Table Entries (-hash): 887 
+[2017/10/20@10:11:03.260+0300] P-4300       T-10836 I BROKER  0: (4244)  Crash Recovery (-i): Enabled 
+[2017/10/20@10:11:03.260+0300] P-4300       T-10836 I BROKER  0: (17557) Number of indexes included in statistics collection (-indexrangesize): 50 
+[2017/10/20@10:11:03.260+0300] P-4300       T-10836 I BROKER  0: (14268) TCP/IP Version (-ipver): IPV4 
+[2017/10/20@10:11:03.260+0300] P-4300       T-10836 I BROKER  0: (12263) SSL Key Alias Name (-keyalias): Not Enabled 
+[2017/10/20@10:11:03.260+0300] P-4300       T-10836 I BROKER  0: (12815) Lock table hash table size (-lkhash): 1237 
+[2017/10/20@10:11:03.260+0300] P-4300       T-10836 I BROKER  0: (17805) Original Lock Release Algorithm (-lkrela): Not Enabled 
+[2017/10/20@10:11:03.260+0300] P-4300       T-10836 I BROKER  0: (17560) Number of LRU force skips (-lruskips): 0 
+[2017/10/20@10:11:03.261+0300] P-4300       T-10836 I BROKER  0: (17561) Number of LRU2 force skips (-lru2skips): 0 
+[2017/10/20@10:11:03.261+0300] P-4300       T-10836 I BROKER  0: (13953) Maximum Area Number (-maxArea): 32000 
+[2017/10/20@10:11:03.261+0300] P-4300       T-10836 I BROKER  0: (12540) Size of JTA transaction table (-maxxids):  100 
+[2017/10/20@10:11:03.261+0300] P-4300       T-10836 I BROKER  0: (5649)  Maximum Port for Auto Servers (-maxport): 5000 
+[2017/10/20@10:11:03.261+0300] P-4300       T-10836 I BROKER  0: (5648)  Minimum Port for Auto Servers (-minport): 3000 
+[2017/10/20@10:11:03.261+0300] P-4300       T-10836 I BROKER  0: (17564) Multi-tenancy partition cache size (-mtpmsize): 1024 
+[2017/10/20@10:11:03.347+0300] P-4300       T-10836 I BROKER  0: (12821) Use muxlatches (-mux): 1 
+[2017/10/20@10:11:03.347+0300] P-4300       T-10836 I BROKER  0: (4260)  Maximum Number of Users (-n): 21 
+[2017/10/20@10:11:03.347+0300] P-4300       T-10836 I BROKER  0: (17566) Minimum time to nap at first -spin exhaustion (-nap): 10 
+[2017/10/20@10:11:03.347+0300] P-4300       T-10836 I BROKER  0: (17565) Maximum time to nap at -spin exhaustion (-napmax): 250 
+[2017/10/20@10:11:03.347+0300] P-4300       T-10836 I BROKER  0: (18522) SSL No Host Verify (-nohostverify): Not Enabled 
+[2017/10/20@10:11:03.347+0300] P-4300       T-10836 I BROKER  0: (17807) Disable LRU mechanism (-nolru): Not Enabled 
+[2017/10/20@10:11:03.347+0300] P-4300       T-10836 I BROKER  0: (12273) SSL No Session Cache (-nosessioncache): Not Enabled 
+[2017/10/20@10:11:03.347+0300] P-4300       T-10836 I BROKER  0: (18521) SSL No Session Reuse (-nosessionreuse): Not Enabled 
+[2017/10/20@10:11:03.348+0300] P-4300       T-10836 I BROKER  0: (16689) Login Governor (-nGovernor): 0 of 21 
+[2017/10/20@10:11:03.348+0300] P-4300       T-10836 I BROKER  0: (18398) Number of checkpoint statistics to record (-numCheckpointStats): 32 
+[2017/10/20@10:11:03.348+0300] P-4300       T-10836 I BROKER  0: (8527)  Storage object cache size (-omsize): 1024 
+[2017/10/20@10:11:03.348+0300] P-4300       T-10836 I BROKER  0: (13870) Database Service Manager - IPC Queue Size (-pica): 64.0  KBytes 
+[2017/10/20@10:11:03.348+0300] P-4300       T-10836 I BROKER  0: (17802) Shared memory segments locked (-pinshm): Not Enabled 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (16953) Use pollset mechanism for client/server (-pollset): Not Enabled 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (16955) Delay first prefetch message (-prefetchDelay): Not Enabled 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (16956) Prefetch message fill percentage (-prefetchFactor): 0 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (16957) Minimum records in prefetch msg (-prefetchNumRecs): 16 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (16958) Suspension queue poll priority (-prefetchPriority): 0 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (17568) APW queue scan cycle time in milliseconds (-pwqdelay): 100 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (17569) APW minimum queue length before write (-pwqmin): 1 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (17570) APW buffer scan cycle time in seconds (-pwsdelay): 1 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (17571) APW maximum number of buffers to scan per cycle (-pwscan): 5 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (17572) APW maximum number of buffers to write per cycle (-pwwmax): 25 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (4247)  Before-Image File I/O (-r -R): Reliable 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (17563) Record free chain search depth factor (-recspacesearchdepth): 5 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (18478) Security cache size (-secsize): 512 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (6526)  Number of Semaphore Sets (-semsets): 3 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (12264) SSL Session Timeout (-sessiontimeout): 0 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (13924) Maximum Shared Memory Segment Size (-shmsegsize): 1024 Mb 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (4243)  Current Spin Lock Tries (-spin): 1 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (17803) SSL Encryption for TCP/IP connections (-ssl): Not Enabled 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (18525) STS Debug Logging Level default (-stslogginglevel): 0 
+[2017/10/20@10:11:03.349+0300] P-4300       T-10836 I BROKER  0: (17556) Number of tables included in statistics collection (-tablerangesize): 50 
+[2017/10/20@10:11:03.353+0300] P-4300       T-10836 I BROKER  0: (18118) User Notification Time (-usernotifytime): 0 seconds 
+[2017/10/20@10:11:03.353+0300] P-4300       T-10836 I BROKER  0: (18407) Number of indexes per user included in statistics collection (-userindexrangesize): 50 
+[2017/10/20@10:11:03.353+0300] P-4300       T-10836 I BROKER  0: (18405) Number of tables per user included in statistics collection (-usertablerangesize): 50 
+[2017/10/20@10:11:03.353+0300] P-4300       T-10836 I BROKER  0: (14017) Area block consistency check (-AreaCheck): Not Enabled 
+[2017/10/20@10:11:03.353+0300] P-4300       T-10836 I BROKER  0: (4239)  Number of Database Buffers (-B): 3000 
+[2017/10/20@10:11:03.353+0300] P-4300       T-10836 I BROKER  0: (17562) Number of Alternate Database Buffers (-B2): 0 
+[2017/10/20@10:11:03.354+0300] P-4300       T-10836 I BROKER  0: (9422)  Maximum private buffers per user (-Bpmax): 64 
+[2017/10/20@10:11:03.354+0300] P-4300       T-10836 I BROKER  0: (14016) Database block consistency check (-DbCheck): Not Enabled 
+[2017/10/20@10:11:03.354+0300] P-4300       T-10836 I BROKER  0: (13869) Database Service Manager - Service(s) to start (-DBService): Not Enabled 
+[2017/10/20@10:11:03.357+0300] P-4300       T-10836 I BROKER  0: (10535) Enhanced Read-Only mode (-ERO): Not Enabled 
+[2017/10/20@10:11:03.357+0300] P-4300       T-10836 I BROKER  0: (4237)  Force Access (-F): Not Enabled 
+[2017/10/20@10:11:03.357+0300] P-4300       T-10836 I BROKER  0: (4249)  Before-Image Truncate Interval (-G): 0 
+[2017/10/20@10:11:03.357+0300] P-4300       T-10836 I BROKER  0: (4261)  Host Name (-H): CJ1439-lap 
+[2017/10/20@10:11:03.357+0300] P-4300       T-10836 I BROKER  0: (14018) Index block consistency check (-IndexCheck): Not Enabled 
+[2017/10/20@10:11:03.357+0300] P-4300       T-10836 I BROKER  0: (4241)  Current Size of Lock Table (-L): 8192 
+[2017/10/20@10:11:03.357+0300] P-4300       T-10836 I BROKER  0: (16688) Lock Governor (-LGovernor): 0% 
+[2017/10/20@10:11:03.357+0300] P-4300       T-10836 I BROKER  0: (4257)  Maximum Number of Clients Per Server (-Ma): 5 
+[2017/10/20@10:11:03.357+0300] P-4300       T-10836 I BROKER  0: (14016) Memory overwrite check (-MemCheck): Not Enabled 
+[2017/10/20@10:11:03.357+0300] P-4300       T-10836 I BROKER  0: (4245)  Delay of Before-Image Flush (-Mf): 3 
+[2017/10/20@10:11:03.357+0300] P-4300       T-10836 I BROKER  0: (4259)  Minimum Clients Per Server (-Mi): 1 
+[2017/10/20@10:11:03.358+0300] P-4300       T-10836 I BROKER  0: (12818) Message Buffer Size (-Mm): 1024 
+[2017/10/20@10:11:03.358+0300] P-4300       T-10836 I BROKER  0: (4258)  Maximum Number of Servers (-Mn): 5 
+[2017/10/20@10:11:03.358+0300] P-4300       T-10836 I BROKER  0: (12819) Servers per Protocol (-Mp): 0 
+[2017/10/20@10:11:03.358+0300] P-4300       T-10836 I BROKER  0: (5647)  Maximum Servers Per Broker (-Mpb): 0 
+[2017/10/20@10:11:03.358+0300] P-4300       T-10836 I BROKER  0: (4240)  Excess Shared Memory Size (-Mxs): 23 
+[2017/10/20@10:11:03.358+0300] P-4300       T-10836 I BROKER  0: (4263)  Network Type (-N): TCP 
+[2017/10/20@10:11:03.358+0300] P-4300       T-10836 I BROKER  0: (16954) Server network message wait time (-Nmsgwait): 2 
+[2017/10/20@10:11:03.360+0300] P-4300       T-10836 I BROKER  0: (10357) Pending client connection timeout (-PendConnTimeout): 0 
+[2017/10/20@10:11:03.361+0300] P-4300       T-10836 I BROKER  0: (4262)  Service Name (-S): 12778 
+[2017/10/20@10:11:03.361+0300] P-4300       T-10836 I BROKER  0: (17804) Broker server group support (-ServerType): BOTH 
+[2017/10/20@10:11:03.361+0300] P-4300       T-10836 I BROKER  0: (10028) SQL Server Max Open Cursors (-SQLCursors): 0 
+[2017/10/20@10:11:03.361+0300] P-4300       T-10836 I BROKER  0: (10026) SQL Server Stack Size (-SQLStack): 0 
+[2017/10/20@10:11:03.361+0300] P-4300       T-10836 I BROKER  0: (10027) SQL Server Statement Cache Size (-SQLStmtCache): 0 
+[2017/10/20@10:11:03.365+0300] P-4300       T-10836 I BROKER  0: (10029) Size [1K byte units] of SQL Server temp table buffer (-SQLTempStoreBuff): 0 
+[2017/10/20@10:11:03.365+0300] P-4300       T-10836 I BROKER  0: (10030) Size [1K byte units] of SQL Server temp table disk storage (-SQLTempStoreDisk): 0 
+[2017/10/20@10:11:03.365+0300] P-4300       T-10836 I BROKER  0: (10031) Size [1K byte units] of SQL Server temp table data page (-SQLTempStorePageSize): 0 
+[2017/10/20@10:11:03.365+0300] P-4300       T-10836 I BROKER  0: (17955) Authorized data truncation (-SQLTruncateTooLarge): OFF 
+[2017/10/20@10:11:03.365+0300] P-4300       T-10836 I BROKER  0: (18156) SQL Autonomous Schema Update (-SQLWidthUpdate): OFF 
+[2017/10/20@10:11:03.365+0300] P-4300       T-10836 I BROKER  0: (14019) Record block consistency check (-TableCheck): Not Enabled 
+[2017/10/20@10:11:03.365+0300] P-4300       T-10836 I BROKER  0: (17717) TXE Lock retry limit (-TXERetryLimit): 0 
+[2017/10/20@10:11:03.365+0300] P-4300       T-10836 I BROKER  0: (13896) TXE Commit lock skip limit (-TXESkipLimit): 10000 
+[2017/10/20@10:11:03.368+0300] P-4300       T-10836 I BROKER  0: (10836) Database connections are not allowed at this time. 
+[2017/10/20@10:11:03.368+0300] P-4300       T-10836 I BROKER  0: (10471) Database connections have been enabled. 
+[2017/10/20@10:11:03.572+0300] P-4004       T-9668  I SRV     1: (452)   Login by demo on CON:. 
+[2017/10/20@10:11:03.598+0300] P-4004       T-9668  I SRV     1: (5646)  Started on port 3000 using TCP IPV4 address 127.0.0.1, pid 4004. 
+[2017/10/20@10:11:04.538+0300] P-4004       T-9668  I SRV     1: (742)   Login usernum 24, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:11:04.538+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 24 set name to demo. 
+[2017/10/20@10:11:04.538+0300] P-4004       T-9668  I SRV     1: (17961) User 24 set tty to CJ1439-lap. 
+[2017/10/20@10:11:04.554+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 24 set name to demo. 
+[2017/10/20@10:11:23.529+0300] P-9040       T-7900  I SRV     2: (452)   Login by demo on CON:. 
+[2017/10/20@10:11:23.537+0300] P-9040       T-7900  I SRV     2: (5646)  Started on port 3002 using TCP IPV4 address 127.0.0.1, pid 9040. 
+[2017/10/20@10:11:24.511+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:11:24.512+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:11:24.512+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:11:24.520+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:12:00.646+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/20@10:14:51.313+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:14:51.313+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:14:51.313+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:14:51.321+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:14:55.475+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/20@10:15:16.156+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:15:16.156+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:15:16.156+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:15:16.165+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:15:20.068+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/20@10:15:49.530+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:15:49.530+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:15:49.530+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:15:49.538+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:16:04.542+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/20@10:16:42.609+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:16:42.609+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:16:42.609+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:16:42.617+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:17:16.878+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/20@10:18:07.582+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:18:07.582+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:18:07.582+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:18:07.590+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:18:19.840+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/20@10:18:24.799+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:18:24.799+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:18:24.799+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:18:24.808+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:18:28.908+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/20@10:18:50.192+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:18:50.192+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:18:50.192+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:18:50.199+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:18:58.828+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/20@10:19:15.317+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:19:15.317+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:19:15.317+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:19:15.325+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:19:23.131+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/20@10:19:32.975+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:19:32.975+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:19:32.975+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:19:32.984+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:19:36.825+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/20@10:20:10.235+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:20:10.235+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:20:10.235+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:20:10.243+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:20:18.476+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/20@10:20:57.989+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:20:57.989+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:20:57.989+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:20:57.997+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:21:21.689+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 23, userid demo, on CJ1439-lap. 
+[2017/10/20@10:29:40.906+0300] P-4004       T-9668  I SRV     1: (739)   Logout usernum 24, userid demo, on CJ1439-lap. 
+[2017/10/20@10:29:41.728+0300] P-4004       T-9668  I SRV     1: (742)   Login usernum 24, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:29:41.728+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 24 set name to demo. 
+[2017/10/20@10:29:41.728+0300] P-4004       T-9668  I SRV     1: (17961) User 24 set tty to CJ1439-lap. 
+[2017/10/20@10:29:41.736+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 24 set name to demo. 
+[2017/10/20@10:30:04.517+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 23, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:30:04.517+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:30:04.517+0300] P-9040       T-7900  I SRV     2: (17961) User 23 set tty to CJ1439-lap. 
+[2017/10/20@10:30:04.524+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 23 set name to demo. 
+[2017/10/20@10:30:58.880+0300] P-8068       T-10776 I SRV     3: (452)   Login by demo on CON:. 
+[2017/10/20@10:30:58.900+0300] P-8068       T-10776 I SRV     3: (5646)  Started on port 3003 using TCP IPV4 address 127.0.0.1, pid 8068. 
+[2017/10/20@10:30:59.864+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:30:59.864+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:30:59.864+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@10:30:59.885+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:31:18.970+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@10:31:26.721+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:31:26.721+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:31:26.721+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@10:31:26.730+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:31:27.618+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@10:32:47.041+0300] P-4004       T-9668  I SRV     1: (739)   Logout usernum 24, userid demo, on CJ1439-lap. 
+[2017/10/20@10:32:57.994+0300] P-4004       T-9668  I SRV     1: (742)   Login usernum 24, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:32:57.994+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 24 set name to demo. 
+[2017/10/20@10:32:57.994+0300] P-4004       T-9668  I SRV     1: (17961) User 24 set tty to CJ1439-lap. 
+[2017/10/20@10:32:58.004+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 24 set name to demo. 
+[2017/10/20@10:33:20.348+0300] P-4004       T-9668  I SRV     1: (739)   Logout usernum 24, userid demo, on CJ1439-lap. 
+[2017/10/20@10:33:56.640+0300] P-4004       T-9668  I SRV     1: (742)   Login usernum 24, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:33:56.640+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 24 set name to demo. 
+[2017/10/20@10:33:56.640+0300] P-4004       T-9668  I SRV     1: (17961) User 24 set tty to CJ1439-lap. 
+[2017/10/20@10:33:56.653+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 24 set name to demo. 
+[2017/10/20@10:34:04.584+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:34:04.585+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:34:04.585+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@10:34:04.594+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:34:05.898+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@10:36:38.179+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:36:38.179+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:36:38.179+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@10:36:38.187+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:36:40.180+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@10:37:49.317+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:37:49.317+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:37:49.317+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@10:37:49.325+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:38:41.246+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@10:40:57.006+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:40:57.006+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:40:57.006+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@10:40:57.014+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:41:24.789+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@10:44:34.284+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:44:34.284+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:44:34.284+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@10:44:34.292+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:44:37.926+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@10:50:33.969+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:50:33.969+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:50:33.969+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@10:50:33.984+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:50:46.051+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@10:51:23.418+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:51:23.418+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:51:23.418+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@10:51:23.426+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:51:27.627+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@10:51:46.684+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@10:51:46.684+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:51:46.684+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@10:51:46.692+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@10:51:57.083+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@11:27:05.564+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@11:27:05.565+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@11:27:05.565+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@11:27:05.573+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@11:27:14.032+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@11:27:17.903+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@11:27:17.903+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@11:27:17.903+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@11:27:17.911+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@11:27:28.312+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@11:27:32.766+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@11:27:32.766+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@11:27:32.766+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@11:27:32.774+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@11:27:34.926+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@11:27:40.139+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@11:27:40.139+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@11:27:40.139+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@11:27:40.147+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@11:27:49.624+0300] P-8068       T-10776 I SRV     3: (739)   Logout usernum 22, userid demo, on CJ1439-lap. 
+[2017/10/20@11:27:55.272+0300] P-8068       T-10776 I SRV     3: (742)   Login usernum 22, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@11:27:55.272+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@11:27:55.272+0300] P-8068       T-10776 I SRV     3: (17961) User 22 set tty to CJ1439-lap. 
+[2017/10/20@11:27:55.281+0300] P-8068       T-10776 I SRV     3: (7129)  Usr 22 set name to demo. 
+[2017/10/20@12:22:13.065+0300] P-7896       T-8752  I SRV     4: (452)   Login by demo on CON:. 
+[2017/10/20@12:22:13.077+0300] P-7896       T-8752  I SRV     4: (5646)  Started on port 3004 using TCP IPV4 address 127.0.0.1, pid 7896. 
+[2017/10/20@12:22:14.044+0300] P-7896       T-8752  I SRV     4: (742)   Login usernum 21, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@12:22:14.044+0300] P-7896       T-8752  I SRV     4: (7129)  Usr 21 set name to demo. 
+[2017/10/20@12:22:14.044+0300] P-7896       T-8752  I SRV     4: (17961) User 21 set tty to CJ1439-lap. 
+[2017/10/20@12:22:14.067+0300] P-7896       T-8752  I SRV     4: (7129)  Usr 21 set name to demo. 
+[2017/10/20@12:22:20.845+0300] P-7896       T-8752  I SRV     4: (739)   Logout usernum 21, userid demo, on CJ1439-lap. 
+[2017/10/20@12:22:45.969+0300] P-7896       T-8752  I SRV     4: (742)   Login usernum 21, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@12:22:45.969+0300] P-7896       T-8752  I SRV     4: (7129)  Usr 21 set name to demo. 
+[2017/10/20@12:22:45.969+0300] P-7896       T-8752  I SRV     4: (17961) User 21 set tty to CJ1439-lap. 
+[2017/10/20@12:22:45.977+0300] P-7896       T-8752  I SRV     4: (7129)  Usr 21 set name to demo. 
+[2017/10/20@12:23:01.932+0300] P-7896       T-8752  I SRV     4: (739)   Logout usernum 21, userid demo, on CJ1439-lap. 
+[2017/10/20@12:23:05.482+0300] P-7896       T-8752  I SRV     4: (742)   Login usernum 21, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@12:23:05.482+0300] P-7896       T-8752  I SRV     4: (7129)  Usr 21 set name to demo. 
+[2017/10/20@12:23:05.482+0300] P-7896       T-8752  I SRV     4: (17961) User 21 set tty to CJ1439-lap. 
+[2017/10/20@12:23:05.490+0300] P-7896       T-8752  I SRV     4: (7129)  Usr 21 set name to demo. 
+[2017/10/20@12:25:05.431+0300] P-4004       T-9668  I SRV     1: (742)   Login usernum 20, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@12:25:05.431+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 20 set name to demo. 
+[2017/10/20@12:25:05.431+0300] P-4004       T-9668  I SRV     1: (17961) User 20 set tty to CJ1439-lap. 
+[2017/10/20@12:25:05.439+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 20 set name to demo. 
+[2017/10/20@12:25:27.590+0300] P-4004       T-9668  I SRV     1: (739)   Logout usernum 20, userid demo, on CJ1439-lap. 
+[2017/10/20@12:26:37.247+0300] P-4004       T-9668  I SRV     1: (742)   Login usernum 20, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@12:26:37.247+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 20 set name to demo. 
+[2017/10/20@12:26:37.247+0300] P-4004       T-9668  I SRV     1: (17961) User 20 set tty to CJ1439-lap. 
+[2017/10/20@12:26:37.256+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 20 set name to demo. 
+[2017/10/20@12:26:57.428+0300] P-4004       T-9668  I SRV     1: (739)   Logout usernum 20, userid demo, on CJ1439-lap. 
+[2017/10/20@12:27:10.379+0300] P-4004       T-9668  I SRV     1: (742)   Login usernum 20, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@12:27:10.379+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 20 set name to demo. 
+[2017/10/20@12:27:10.379+0300] P-4004       T-9668  I SRV     1: (17961) User 20 set tty to CJ1439-lap. 
+[2017/10/20@12:27:10.388+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 20 set name to demo. 
+[2017/10/20@12:27:13.060+0300] P-4004       T-9668  I SRV     1: (739)   Logout usernum 20, userid demo, on CJ1439-lap. 
+[2017/10/20@12:28:23.377+0300] P-4004       T-9668  I SRV     1: (742)   Login usernum 20, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@12:28:23.377+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 20 set name to demo. 
+[2017/10/20@12:28:23.377+0300] P-4004       T-9668  I SRV     1: (17961) User 20 set tty to CJ1439-lap. 
+[2017/10/20@12:28:23.385+0300] P-4004       T-9668  I SRV     1: (7129)  Usr 20 set name to demo. 
+[2017/10/20@12:28:57.891+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@12:28:57.892+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@12:28:57.892+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@12:28:57.900+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@12:31:13.225+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@12:57:18.153+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@12:57:18.153+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@12:57:18.153+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@12:57:18.161+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@12:57:52.845+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@12:59:26.314+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@12:59:26.314+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@12:59:26.314+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@12:59:26.321+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:01:26.831+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:17:32.420+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:17:32.420+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:17:32.420+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:17:32.429+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:17:37.522+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:17:48.736+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:17:48.736+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:17:48.736+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:17:48.744+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:17:53.828+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:18:11.579+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:18:11.579+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:18:11.579+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:18:11.587+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:18:16.962+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:18:23.340+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:18:23.340+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:18:23.340+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:18:23.348+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:18:25.692+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:18:39.056+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:18:39.056+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:18:39.056+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:18:39.065+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:18:43.508+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:19:02.553+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:19:02.553+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:19:02.553+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:19:02.561+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:19:45.566+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:21:39.888+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:21:39.888+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:21:39.888+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:21:39.897+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:21:40.931+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:21:43.432+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:21:43.432+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:21:43.432+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:21:43.440+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:22:02.220+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:26:00.168+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:26:00.168+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:26:00.168+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:26:00.176+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:26:01.060+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:26:05.015+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:26:05.015+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:26:05.015+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:26:05.022+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:26:10.093+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:26:27.392+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:26:27.392+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:26:27.392+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:26:27.400+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:26:33.253+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:26:49.754+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:26:49.754+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:26:49.754+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:26:49.762+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:26:56.885+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:28:48.769+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:28:48.769+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:28:48.769+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:28:48.777+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:29:00.546+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:29:26.351+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:29:26.351+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:29:26.351+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:29:26.359+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:31:44.783+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:32:00.581+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:32:00.581+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:32:00.581+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:32:00.588+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:32:01.806+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:41:08.044+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:41:08.044+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:41:08.045+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:41:08.053+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:41:14.059+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:41:27.347+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:41:27.347+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:41:27.347+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:41:27.355+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:41:47.292+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:44:19.103+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:44:19.103+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:44:19.103+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:44:19.112+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:44:19.813+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:44:22.261+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:44:22.261+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:44:22.261+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:44:22.269+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:44:45.920+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:49:09.980+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:49:09.980+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:49:09.980+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:49:09.988+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:49:16.249+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:53:56.743+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:53:56.743+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:53:56.743+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:53:56.752+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:54:11.010+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@13:56:00.761+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@13:56:00.762+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:56:00.762+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@13:56:00.770+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@13:56:16.378+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@14:00:46.770+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@14:00:46.770+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@14:00:46.770+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@14:00:46.778+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@14:00:48.059+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 
+[2017/10/20@14:01:58.115+0300] P-9040       T-7900  I SRV     2: (742)   Login usernum 19, userid demo client type ABL , on CJ1439-lap using TCP/IP IPV4 address 127.0.0.1. 
+[2017/10/20@14:01:58.115+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@14:01:58.115+0300] P-9040       T-7900  I SRV     2: (17961) User 19 set tty to CJ1439-lap. 
+[2017/10/20@14:01:58.123+0300] P-9040       T-7900  I SRV     2: (7129)  Usr 19 set name to demo. 
+[2017/10/20@14:02:18.781+0300] P-9040       T-7900  I SRV     2: (739)   Logout usernum 19, userid demo, on CJ1439-lap. 

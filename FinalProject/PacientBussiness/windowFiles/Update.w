@@ -37,10 +37,10 @@ define input parameter useEmail as character no-undo.
 /* Local Variable Definitions ---                                       */
 {dsPacient.i}
 
-define variable fullName  as character                  no-undo.
-define variable bePacient as PacientBussiness.bePacient no-undo.
-define variable firstName as character                  no-undo.
-define variable lastName  as character                  no-undo.
+define variable fullName  as character                                  no-undo.
+define variable bePacient as PacientBussiness.BussinessEntity.bePacient no-undo.
+define variable firstName as character                                  no-undo.
+define variable lastName  as character                                  no-undo.
 
 /* _UIB-CODE-BLOCK-END */
 &ANALYZE-RESUME
@@ -57,8 +57,8 @@ define variable lastName  as character                  no-undo.
 &Scoped-define FRAME-NAME DEFAULT-FRAME
 
 /* Standard List Definitions                                            */
-&Scoped-Define ENABLED-OBJECTS fillFirstName fillLastName btnSubmit ~
-fillEmail fillPhone fillBirth 
+&Scoped-Define ENABLED-OBJECTS IMAGE-3 fillFirstName fillLastName fillEmail ~
+btnSubmit fillPhone fillBirth 
 &Scoped-Define DISPLAYED-OBJECTS fillFirstName fillLastName fillEmail ~
 fillPhone fillBirth 
 
@@ -73,52 +73,60 @@ fillPhone fillBirth
 /* ***********************  Control Definitions  ********************** */
 
 /* Define the widget handle for the window                              */
-DEFINE VAR      C-Win     AS WIDGET-HANDLE              NO-UNDO.
+DEFINE VAR C-Win AS WIDGET-HANDLE NO-UNDO.
 
 /* Definitions of the field level widgets                               */
 DEFINE BUTTON btnSubmit 
-    LABEL "Submit" 
-    SIZE 20 BY 2.38.
+     LABEL "Submit" 
+     SIZE 20 BY 2.38
+     FONT 11.
 
-DEFINE VARIABLE fillBirth     AS DATE      FORMAT "99/99/9999":U 
-    LABEL "Date of Birth" 
-    VIEW-AS FILL-IN 
-    SIZE 26 BY 1.48 NO-UNDO.
+DEFINE VARIABLE fillBirth AS DATE FORMAT "99/99/9999":U 
+     LABEL "Date of Birth" 
+     VIEW-AS FILL-IN 
+     SIZE 26 BY 1.48 NO-UNDO.
 
-DEFINE VARIABLE fillEmail     AS CHARACTER FORMAT "X(256)":U 
-    LABEL "E-mail" 
-    VIEW-AS FILL-IN 
-    SIZE 26 BY 1.48 NO-UNDO.
+DEFINE VARIABLE fillEmail AS CHARACTER FORMAT "X(256)":U 
+     LABEL "E-mail" 
+     VIEW-AS FILL-IN 
+     SIZE 26 BY 1.48 NO-UNDO.
 
 DEFINE VARIABLE fillFirstName AS CHARACTER FORMAT "X(256)":U 
-    LABEL "First Name" 
-    VIEW-AS FILL-IN 
-    SIZE 26 BY 1.43 NO-UNDO.
+     LABEL "First Name" 
+     VIEW-AS FILL-IN 
+     SIZE 26 BY 1.43 NO-UNDO.
 
-DEFINE VARIABLE fillLastName  AS CHARACTER FORMAT "X(256)":U 
-    LABEL "Last Name" 
-    VIEW-AS FILL-IN 
-    SIZE 26 BY 1.48 NO-UNDO.
+DEFINE VARIABLE fillLastName AS CHARACTER FORMAT "X(256)":U 
+     LABEL "Last Name" 
+     VIEW-AS FILL-IN 
+     SIZE 26 BY 1.48 NO-UNDO.
 
-DEFINE VARIABLE fillPhone     AS CHARACTER FORMAT "X(256)":U 
-    LABEL "Phone" 
-    VIEW-AS FILL-IN 
-    SIZE 26 BY 1.48 NO-UNDO.
+DEFINE VARIABLE fillPhone AS CHARACTER FORMAT "X(256)":U 
+     LABEL "Phone" 
+     VIEW-AS FILL-IN 
+     SIZE 26 BY 1.48 NO-UNDO.
+
+DEFINE IMAGE IMAGE-3
+     FILENAME "C:/Users/Demo/Downloads/latest-updates.jpg":U
+     STRETCH-TO-FIT
+     SIZE 21 BY 4.76.
 
 
 /* ************************  Frame Definitions  *********************** */
 
 DEFINE FRAME DEFAULT-FRAME
-    fillFirstName AT ROW 2.67 COL 14 COLON-ALIGNED WIDGET-ID 2
-    fillLastName AT ROW 4.81 COL 14 COLON-ALIGNED WIDGET-ID 4
-    btnSubmit AT ROW 6.48 COL 55 WIDGET-ID 12
-    fillEmail AT ROW 6.95 COL 14 COLON-ALIGNED WIDGET-ID 6
-    fillPhone AT ROW 9.1 COL 14 COLON-ALIGNED WIDGET-ID 8
-    fillBirth AT ROW 11.24 COL 14 COLON-ALIGNED WIDGET-ID 10
+     fillFirstName AT ROW 2.67 COL 16 COLON-ALIGNED WIDGET-ID 2
+     fillLastName AT ROW 4.81 COL 16 COLON-ALIGNED WIDGET-ID 4
+     fillEmail AT ROW 6.95 COL 16 COLON-ALIGNED WIDGET-ID 6
+     btnSubmit AT ROW 7.43 COL 55 WIDGET-ID 12
+     fillPhone AT ROW 9.1 COL 16 COLON-ALIGNED WIDGET-ID 8
+     fillBirth AT ROW 11.24 COL 16 COLON-ALIGNED WIDGET-ID 10
+     IMAGE-3 AT ROW 2.43 COL 54 WIDGET-ID 14
     WITH 1 DOWN NO-BOX KEEP-TAB-ORDER OVERLAY 
-    SIDE-LABELS NO-UNDERLINE THREE-D 
-    AT COL 1 ROW 1
-    SIZE 80 BY 16 WIDGET-ID 100.
+         SIDE-LABELS NO-UNDERLINE THREE-D 
+         AT COL 1 ROW 1
+         SIZE 80 BY 16
+         BGCOLOR 15 FONT 10 WIDGET-ID 100.
 
 
 /* *********************** Procedure Settings ************************ */
@@ -135,24 +143,24 @@ DEFINE FRAME DEFAULT-FRAME
 
 &ANALYZE-SUSPEND _CREATE-WINDOW
 IF SESSION:DISPLAY-TYPE = "GUI":U THEN
-    CREATE WINDOW C-Win ASSIGN
-        HIDDEN             = YES
-        TITLE              = "<insert window title>"
-        HEIGHT             = 16
-        WIDTH              = 80
-        MAX-HEIGHT         = 16
-        MAX-WIDTH          = 80
-        VIRTUAL-HEIGHT     = 16
-        VIRTUAL-WIDTH      = 80
-        RESIZE             = yes
-        SCROLL-BARS        = no
-        STATUS-AREA        = no
-        BGCOLOR            = ?
-        FGCOLOR            = ?
-        KEEP-FRAME-Z-ORDER = yes
-        THREE-D            = yes
-        MESSAGE-AREA       = no
-        SENSITIVE          = yes.
+  CREATE WINDOW C-Win ASSIGN
+         HIDDEN             = YES
+         TITLE              = "Update"
+         HEIGHT             = 16
+         WIDTH              = 80
+         MAX-HEIGHT         = 16
+         MAX-WIDTH          = 80
+         VIRTUAL-HEIGHT     = 16
+         VIRTUAL-WIDTH      = 80
+         RESIZE             = yes
+         SCROLL-BARS        = no
+         STATUS-AREA        = no
+         BGCOLOR            = ?
+         FGCOLOR            = ?
+         KEEP-FRAME-Z-ORDER = yes
+         THREE-D            = yes
+         MESSAGE-AREA       = no
+         SENSITIVE          = yes.
 ELSE {&WINDOW-NAME} = CURRENT-WINDOW.
 /* END WINDOW DEFINITION                                                */
 &ANALYZE-RESUME
@@ -167,7 +175,7 @@ ELSE {&WINDOW-NAME} = CURRENT-WINDOW.
 /* SETTINGS FOR FRAME DEFAULT-FRAME
                                                                         */
 IF SESSION:DISPLAY-TYPE = "GUI":U AND VALID-HANDLE(C-Win)
-    THEN C-Win:HIDDEN = no.
+THEN C-Win:HIDDEN = no.
 
 /* _RUN-TIME-ATTRIBUTES-END */
 &ANALYZE-RESUME
@@ -181,7 +189,7 @@ IF SESSION:DISPLAY-TYPE = "GUI":U AND VALID-HANDLE(C-Win)
 &Scoped-define SELF-NAME C-Win
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL C-Win C-Win
 ON END-ERROR OF C-Win /* <insert window title> */
-    OR ENDKEY OF {&WINDOW-NAME} ANYWHERE 
+OR ENDKEY OF {&WINDOW-NAME} ANYWHERE 
     DO:
         /* This case occurs when the user presses the "Esc" key.
            In a persistently run window, just ignore this.  If we did not, the
@@ -189,20 +197,20 @@ ON END-ERROR OF C-Win /* <insert window title> */
         IF THIS-PROCEDURE:PERSISTENT THEN RETURN NO-APPLY.
     END.
 
-bePacient = new PacientBussiness.bePacient().
+bePacient = new PacientBussiness.BussinessEntity.bePacient().
 fullName = bePacient:returnNameByEmail(useEmail).
 
            
 on choose of btnSubmit 
     do:
-        define variable hdsPacient as handle                     no-undo.
-        define variable daPacient  as PacientBussiness.daPacient no-undo.
-        define variable bePacient  as PacientBussiness.bePacient no-undo.
-        define variable qPacient   as handle                     no-undo.
-        define variable dtsHandle  as handle                     no-undo.
+        define variable hdsPacient as handle                                     no-undo.
+        define variable daPacient  as PacientBussiness.DataAccess.daPacient      no-undo.
+        define variable bePacient  as PacientBussiness.BussinessEntity.bePacient no-undo.
+        define variable qPacient   as handle                                     no-undo.
+        define variable dtsHandle  as handle                                     no-undo.
         
-        bePacient = new PacientBussiness.bePacient().
-        daPacient = new PacientBussiness.daPacient().
+        bePacient = new PacientBussiness.BussinessEntity.bePacient().
+        daPacient = new PacientBussiness.DataAccess.daPacient().
         
         define query qPacient for Pacient scrolling.
         define data-source srcPacient for query qPacient.
@@ -243,7 +251,7 @@ on choose of btnSubmit
                 assign 
                     ttPacient.LastName = fillLastName:screen-value.
             end.
-            if(fillBirth:screen-value <> "") then 
+            if(date(fillBirth:screen-value) <> ?) then 
             do:
                 assign 
                     ttPacient.Birth = date(fillBirth:screen-value).
@@ -287,7 +295,7 @@ on choose of btnSubmit
 
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL C-Win C-Win
 ON WINDOW-CLOSE OF C-Win /* <insert window title> */
-    DO:
+DO:
         /* This event will close the window and terminate the procedure.  */
         APPLY "CLOSE":U TO THIS-PROCEDURE.
         RETURN NO-APPLY.
@@ -349,18 +357,18 @@ END.
 
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _PROCEDURE disable_UI C-Win  _DEFAULT-DISABLE
 PROCEDURE disable_UI :
-    /*------------------------------------------------------------------------------
-      Purpose:     DISABLE the User Interface
-      Parameters:  <none>
-      Notes:       Here we clean-up the user-interface by deleting
-                   dynamic widgets we have created and/or hide 
-                   frames.  This procedure is usually called when
-                   we are ready to "clean-up" after running.
-    ------------------------------------------------------------------------------*/
-    /* Delete the WINDOW we created */
-    IF SESSION:DISPLAY-TYPE = "GUI":U AND VALID-HANDLE(C-Win)
-        THEN DELETE WIDGET C-Win.
-    IF THIS-PROCEDURE:PERSISTENT THEN DELETE PROCEDURE THIS-PROCEDURE.
+/*------------------------------------------------------------------------------
+  Purpose:     DISABLE the User Interface
+  Parameters:  <none>
+  Notes:       Here we clean-up the user-interface by deleting
+               dynamic widgets we have created and/or hide 
+               frames.  This procedure is usually called when
+               we are ready to "clean-up" after running.
+------------------------------------------------------------------------------*/
+  /* Delete the WINDOW we created */
+  IF SESSION:DISPLAY-TYPE = "GUI":U AND VALID-HANDLE(C-Win)
+  THEN DELETE WIDGET C-Win.
+  IF THIS-PROCEDURE:PERSISTENT THEN DELETE PROCEDURE THIS-PROCEDURE.
 END PROCEDURE.
 
 /* _UIB-CODE-BLOCK-END */
@@ -368,21 +376,22 @@ END PROCEDURE.
 
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _PROCEDURE enable_UI C-Win  _DEFAULT-ENABLE
 PROCEDURE enable_UI :
-    /*------------------------------------------------------------------------------
-      Purpose:     ENABLE the User Interface
-      Parameters:  <none>
-      Notes:       Here we display/view/enable the widgets in the
-                   user-interface.  In addition, OPEN all queries
-                   associated with each FRAME and BROWSE.
-                   These statements here are based on the "Other 
-                   Settings" section of the widget Property Sheets.
-    ------------------------------------------------------------------------------*/
-    DISPLAY fillFirstName fillLastName fillEmail fillPhone fillBirth 
-        WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
-    ENABLE fillFirstName fillLastName btnSubmit fillEmail fillPhone fillBirth 
-        WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
-    {&OPEN-BROWSERS-IN-QUERY-DEFAULT-FRAME}
-    VIEW C-Win.
+/*------------------------------------------------------------------------------
+  Purpose:     ENABLE the User Interface
+  Parameters:  <none>
+  Notes:       Here we display/view/enable the widgets in the
+               user-interface.  In addition, OPEN all queries
+               associated with each FRAME and BROWSE.
+               These statements here are based on the "Other 
+               Settings" section of the widget Property Sheets.
+------------------------------------------------------------------------------*/
+  DISPLAY fillFirstName fillLastName fillEmail fillPhone fillBirth 
+      WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
+  ENABLE IMAGE-3 fillFirstName fillLastName fillEmail btnSubmit fillPhone 
+         fillBirth 
+      WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
+  {&OPEN-BROWSERS-IN-QUERY-DEFAULT-FRAME}
+  VIEW C-Win.
 END PROCEDURE.
 
 /* _UIB-CODE-BLOCK-END */

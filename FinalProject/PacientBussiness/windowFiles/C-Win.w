@@ -51,7 +51,8 @@ define input parameter chooseOpen as integer no-undo.
 &Scoped-define FRAME-NAME DEFAULT-FRAME
 
 /* Standard List Definitions                                            */
-&Scoped-Define ENABLED-OBJECTS searchFill btnSearch SELECT-1 selectEmail 
+&Scoped-Define ENABLED-OBJECTS IMAGE-4 IMAGE-5 searchFill btnSearch ~
+SELECT-1 selectEmail 
 &Scoped-Define DISPLAYED-OBJECTS searchFill SELECT-1 selectEmail 
 
 /* Custom List Definitions                                              */
@@ -69,36 +70,54 @@ DEFINE VAR C-Win AS WIDGET-HANDLE NO-UNDO.
 
 /* Definitions of the field level widgets                               */
 DEFINE BUTTON btnSearch 
-    LABEL "Search" 
-    SIZE 15 BY 1.14
-    FONT 0.
+     LABEL "Search" 
+     SIZE 19 BY 1.91
+     FONT 11.
 
-DEFINE VARIABLE searchFill  AS CHARACTER FORMAT "X(256)":U 
-    LABEL "Search by Name" 
-    VIEW-AS FILL-IN 
-    SIZE 30 BY 2.14
-    FONT 0 NO-UNDO.
+DEFINE VARIABLE searchFill AS CHARACTER FORMAT "X(256)":U 
+     VIEW-AS FILL-IN 
+     SIZE 30 BY 2.14
+     FONT 11 NO-UNDO.
 
-DEFINE VARIABLE SELECT-1    AS CHARACTER 
-    VIEW-AS SELECTION-LIST SINGLE SCROLLBAR-VERTICAL 
-    SIZE 36 BY 5.95 NO-UNDO.
+DEFINE IMAGE IMAGE-4
+     FILENAME "C:/Users/Demo/Downloads/download.png":U
+     STRETCH-TO-FIT
+     SIZE 18 BY 2.38.
+
+DEFINE IMAGE IMAGE-5
+     FILENAME "C:/Users/Demo/Downloads/email-icon-23.png":U
+     STRETCH-TO-FIT
+     SIZE 8 BY 1.91.
+
+DEFINE VARIABLE SELECT-1 AS CHARACTER 
+     VIEW-AS SELECTION-LIST SINGLE SCROLLBAR-VERTICAL 
+     SIZE 36 BY 5.95
+     FONT 11 NO-UNDO.
 
 DEFINE VARIABLE selectEmail AS CHARACTER 
-    VIEW-AS SELECTION-LIST SINGLE SCROLLBAR-VERTICAL 
-    SIZE 37 BY 2 NO-UNDO.
+     VIEW-AS SELECTION-LIST SINGLE 
+     SIZE 44 BY 2
+     FONT 11 NO-UNDO.
 
 
 /* ************************  Frame Definitions  *********************** */
 
 DEFINE FRAME DEFAULT-FRAME
-    searchFill AT ROW 1.48 COL 25 COLON-ALIGNED WIDGET-ID 8
-    btnSearch AT ROW 4.81 COL 34 WIDGET-ID 4
-    SELECT-1 AT ROW 6.48 COL 24 NO-LABEL WIDGET-ID 10
-    selectEmail AT ROW 14.33 COL 24 NO-LABEL WIDGET-ID 12
+     searchFill AT ROW 1.48 COL 25 COLON-ALIGNED NO-LABEL WIDGET-ID 8
+     btnSearch AT ROW 3.86 COL 33 WIDGET-ID 4
+     SELECT-1 AT ROW 6.48 COL 24 NO-LABEL WIDGET-ID 10
+     selectEmail AT ROW 14.33 COL 20 NO-LABEL WIDGET-ID 12
+     "Search Results" VIEW-AS TEXT
+          SIZE 20 BY 2.14 AT ROW 8.38 COL 4 WIDGET-ID 14
+     "Search by Name" VIEW-AS TEXT
+          SIZE 23 BY .91 AT ROW 1.95 COL 4 WIDGET-ID 18
+     IMAGE-4 AT ROW 1.48 COL 57 WIDGET-ID 20
+     IMAGE-5 AT ROW 14.33 COL 11 WIDGET-ID 22
     WITH 1 DOWN NO-BOX KEEP-TAB-ORDER OVERLAY 
-    SIDE-LABELS NO-UNDERLINE THREE-D 
-    AT COL 1 ROW 1
-    SIZE 80 BY 16 WIDGET-ID 100.
+         SIDE-LABELS NO-UNDERLINE THREE-D 
+         AT COL 1 ROW 1
+         SIZE 80 BY 16
+         BGCOLOR 15 FONT 10 WIDGET-ID 100.
 
 
 /* *********************** Procedure Settings ************************ */
@@ -115,24 +134,24 @@ DEFINE FRAME DEFAULT-FRAME
 
 &ANALYZE-SUSPEND _CREATE-WINDOW
 IF SESSION:DISPLAY-TYPE = "GUI":U THEN
-    CREATE WINDOW C-Win ASSIGN
-        HIDDEN             = YES
-        TITLE              = "<insert window title>"
-        HEIGHT             = 16
-        WIDTH              = 80
-        MAX-HEIGHT         = 16
-        MAX-WIDTH          = 80
-        VIRTUAL-HEIGHT     = 16
-        VIRTUAL-WIDTH      = 80
-        RESIZE             = yes
-        SCROLL-BARS        = no
-        STATUS-AREA        = no
-        BGCOLOR            = ?
-        FGCOLOR            = ?
-        KEEP-FRAME-Z-ORDER = yes
-        THREE-D            = yes
-        MESSAGE-AREA       = no
-        SENSITIVE          = yes.
+  CREATE WINDOW C-Win ASSIGN
+         HIDDEN             = YES
+         TITLE              = "Search"
+         HEIGHT             = 16
+         WIDTH              = 80
+         MAX-HEIGHT         = 16
+         MAX-WIDTH          = 80
+         VIRTUAL-HEIGHT     = 16
+         VIRTUAL-WIDTH      = 80
+         RESIZE             = yes
+         SCROLL-BARS        = no
+         STATUS-AREA        = no
+         BGCOLOR            = ?
+         FGCOLOR            = ?
+         KEEP-FRAME-Z-ORDER = yes
+         THREE-D            = yes
+         MESSAGE-AREA       = no
+         SENSITIVE          = yes.
 ELSE {&WINDOW-NAME} = CURRENT-WINDOW.
 /* END WINDOW DEFINITION                                                */
 &ANALYZE-RESUME
@@ -147,7 +166,7 @@ ELSE {&WINDOW-NAME} = CURRENT-WINDOW.
 /* SETTINGS FOR FRAME DEFAULT-FRAME
    FRAME-NAME                                                           */
 IF SESSION:DISPLAY-TYPE = "GUI":U AND VALID-HANDLE(C-Win)
-    THEN C-Win:HIDDEN = no.
+THEN C-Win:HIDDEN = no.
 
 /* _RUN-TIME-ATTRIBUTES-END */
 &ANALYZE-RESUME
@@ -160,8 +179,8 @@ IF SESSION:DISPLAY-TYPE = "GUI":U AND VALID-HANDLE(C-Win)
 
 &Scoped-define SELF-NAME C-Win
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL C-Win C-Win
-ON END-ERROR OF C-Win /* <insert window title> */
-    OR ENDKEY OF {&WINDOW-NAME} ANYWHERE 
+ON END-ERROR OF C-Win /* Search */
+OR ENDKEY OF {&WINDOW-NAME} ANYWHERE 
     DO:
         /* This case occurs when the user presses the "Esc" key.
            In a persistently run window, just ignore this.  If we did not, the
@@ -171,7 +190,7 @@ ON END-ERROR OF C-Win /* <insert window title> */
     
 define variable cListItem        as character                  no-undo.
 define variable nameString       as character                  no-undo.
-define variable bePacient        as PacientBussiness.bePacient no-undo.
+define variable bePacient        as PacientBussiness.BussinessEntity.bePacient no-undo.
 define variable nameFirst        as character                  no-undo.
 define variable nameLast         as character                  no-undo.
 define variable finalStringValue as character                  no-undo.                             
@@ -180,7 +199,7 @@ define variable useFirstName     as character                  no-undo.
 define variable useLastName      as character                  no-undo.
 define variable useEmail         as character                  no-undo.
     
-bePacient = new PacientBussiness.bePacient().
+bePacient = new PacientBussiness.BussinessEntity.bePacient().
 
 def var numEntries as integer no-undo init 1.
 
@@ -189,7 +208,6 @@ on choose of btnSearch
         def var i as integer no-undo.
         
         SELECT-1:LIST-ITEMS = ''.
-        /*    ASSIGN SELECT-1:LIST-ITEMS IN FRAME {&FRAME-NAME} = "".*/
         
         hasSpaces = index(left-trim(right-trim(searchFill:screen-value," ")," ")," ") <> 0.
         if(hasSpaces) then 
@@ -209,9 +227,6 @@ on choose of btnSearch
                 useFirstName = entry(1,searchFill:SCREEN-VALUE," ").
                 useLastName  = entry(2,searchFill:SCREEN-VALUE," ").              
                 cListItem = SELECT-1:LIST-ITEMS.
-            /*                numEntries = num-items(SELECT-1).*/
-            /*                        MESSAGE SELECT-1:num-items*/
-            /*            VIEW-AS ALERT-BOX.                    */
             end.
         end.
         else 
@@ -223,24 +238,13 @@ on choose of btnSearch
                     VIEW-AS ALERT-BOX.
             end.
             else
-            do:
-      
-                
+            do:               
                 useFirstName = entry(1,searchFill:SCREEN-VALUE," ").
-                /*            useLastName  = entry(2,searchFill:SCREEN-VALUE," ").*/
 
                 cListItem = SELECT-1:LIST-ITEMS.
-            /*                numEntries = num-entries(SELECT-1).*/
-            /*                      MESSAGE SELECT-1:num-items*/
-            /*            VIEW-AS ALERT-BOX.                  */
+
             end.
         end.
-    /*    define variable comboNames as char no-undo*/
-    /*    view-as combo-box list-items SELECT-1.    */
-    /*         disp bePacient:returnName(string(searchFill:screen-value)).*/
-    
-    /*      SELECT-1:SCREEN-VALUE = string(bePacient:returnName(quoter(searchFill:screen-value))).*/
-    /*    returnField:screen-value = bePacient:returnEmail(quoter(searchFill:screen-value)).*/
    
     end.
     
@@ -305,8 +309,8 @@ on value-changed of selectEmail in frame DEFAULT-FRAME
 
 
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _CONTROL C-Win C-Win
-ON WINDOW-CLOSE OF C-Win /* <insert window title> */
-    DO:
+ON WINDOW-CLOSE OF C-Win /* Search */
+DO:
         /* This event will close the window and terminate the procedure.  */
         APPLY "CLOSE":U TO THIS-PROCEDURE.
         RETURN NO-APPLY.
@@ -353,18 +357,18 @@ END.
 
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _PROCEDURE disable_UI C-Win  _DEFAULT-DISABLE
 PROCEDURE disable_UI :
-    /*------------------------------------------------------------------------------
-      Purpose:     DISABLE the User Interface
-      Parameters:  <none>
-      Notes:       Here we clean-up the user-interface by deleting
-                   dynamic widgets we have created and/or hide 
-                   frames.  This procedure is usually called when
-                   we are ready to "clean-up" after running.
-    ------------------------------------------------------------------------------*/
-    /* Delete the WINDOW we created */
-    IF SESSION:DISPLAY-TYPE = "GUI":U AND VALID-HANDLE(C-Win)
-        THEN DELETE WIDGET C-Win.
-    IF THIS-PROCEDURE:PERSISTENT THEN DELETE PROCEDURE THIS-PROCEDURE.
+/*------------------------------------------------------------------------------
+  Purpose:     DISABLE the User Interface
+  Parameters:  <none>
+  Notes:       Here we clean-up the user-interface by deleting
+               dynamic widgets we have created and/or hide 
+               frames.  This procedure is usually called when
+               we are ready to "clean-up" after running.
+------------------------------------------------------------------------------*/
+  /* Delete the WINDOW we created */
+  IF SESSION:DISPLAY-TYPE = "GUI":U AND VALID-HANDLE(C-Win)
+  THEN DELETE WIDGET C-Win.
+  IF THIS-PROCEDURE:PERSISTENT THEN DELETE PROCEDURE THIS-PROCEDURE.
 END PROCEDURE.
 
 /* _UIB-CODE-BLOCK-END */
@@ -372,21 +376,21 @@ END PROCEDURE.
 
 &ANALYZE-SUSPEND _UIB-CODE-BLOCK _PROCEDURE enable_UI C-Win  _DEFAULT-ENABLE
 PROCEDURE enable_UI :
-    /*------------------------------------------------------------------------------
-      Purpose:     ENABLE the User Interface
-      Parameters:  <none>
-      Notes:       Here we display/view/enable the widgets in the
-                   user-interface.  In addition, OPEN all queries
-                   associated with each FRAME and BROWSE.
-                   These statements here are based on the "Other 
-                   Settings" section of the widget Property Sheets.
-    ------------------------------------------------------------------------------*/
-    DISPLAY searchFill SELECT-1 selectEmail 
-        WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
-    ENABLE searchFill btnSearch SELECT-1 selectEmail 
-        WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
-    {&OPEN-BROWSERS-IN-QUERY-DEFAULT-FRAME}
-    VIEW C-Win.
+/*------------------------------------------------------------------------------
+  Purpose:     ENABLE the User Interface
+  Parameters:  <none>
+  Notes:       Here we display/view/enable the widgets in the
+               user-interface.  In addition, OPEN all queries
+               associated with each FRAME and BROWSE.
+               These statements here are based on the "Other 
+               Settings" section of the widget Property Sheets.
+------------------------------------------------------------------------------*/
+  DISPLAY searchFill SELECT-1 selectEmail 
+      WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
+  ENABLE IMAGE-4 IMAGE-5 searchFill btnSearch SELECT-1 selectEmail 
+      WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
+  {&OPEN-BROWSERS-IN-QUERY-DEFAULT-FRAME}
+  VIEW C-Win.
 END PROCEDURE.
 
 /* _UIB-CODE-BLOCK-END */

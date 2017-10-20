@@ -53,7 +53,7 @@ define variable chooseDelete as integer init 1 no-undo.
 &Scoped-define FRAME-NAME DEFAULT-FRAME
 
 /* Standard List Definitions                                            */
-&Scoped-Define ENABLED-OBJECTS btnCreate btnUpdate btnDelete 
+&Scoped-Define ENABLED-OBJECTS IMAGE-2 btnCreate btnUpdate btnDelete 
 
 /* Custom List Definitions                                              */
 /* List-1,List-2,List-3,List-4,List-5,List-6                            */
@@ -71,29 +71,37 @@ DEFINE VAR C-Win AS WIDGET-HANDLE NO-UNDO.
 /* Definitions of the field level widgets                               */
 DEFINE BUTTON btnCreate 
      LABEL "CREATE" 
-     SIZE 18 BY 1.67
-     BGCOLOR 7 .
+     SIZE 20 BY 2.14
+     BGCOLOR 8 FONT 11.
 
 DEFINE BUTTON btnDelete 
      LABEL "DELETE" 
-     SIZE 18 BY 1.67.
+     SIZE 20 BY 2.14
+     FONT 11.
 
 DEFINE BUTTON btnUpdate 
      LABEL "UPDATE" 
-     SIZE 18 BY 1.67.
+     SIZE 20 BY 2.14
+     FONT 11.
+
+DEFINE IMAGE IMAGE-2
+     FILENAME "C:/Users/Demo/Downloads/database_1.png":U
+     STRETCH-TO-FIT
+     SIZE 22 BY 5.48.
 
 
 /* ************************  Frame Definitions  *********************** */
 
 DEFINE FRAME DEFAULT-FRAME
-     btnCreate AT ROW 5.05 COL 32 WIDGET-ID 2
-     btnUpdate AT ROW 8.14 COL 19 WIDGET-ID 6
-     btnDelete AT ROW 8.14 COL 45 WIDGET-ID 8
+     btnCreate AT ROW 3.62 COL 30 WIDGET-ID 2
+     btnUpdate AT ROW 6.95 COL 17 WIDGET-ID 6
+     btnDelete AT ROW 6.95 COL 45 WIDGET-ID 8
+     IMAGE-2 AT ROW 10.52 COL 30 WIDGET-ID 14
     WITH 1 DOWN NO-BOX KEEP-TAB-ORDER OVERLAY 
          SIDE-LABELS NO-UNDERLINE THREE-D 
          AT COL 1 ROW 1
          SIZE 80 BY 16
-         FGCOLOR 7  WIDGET-ID 100.
+         BGCOLOR 15 FONT 10 WIDGET-ID 100.
 
 
 /* *********************** Procedure Settings ************************ */
@@ -112,7 +120,7 @@ DEFINE FRAME DEFAULT-FRAME
 IF SESSION:DISPLAY-TYPE = "GUI":U THEN
   CREATE WINDOW C-Win ASSIGN
          HIDDEN             = YES
-         TITLE              = "<insert window title>"
+         TITLE              = "CRUD Operations"
          HEIGHT             = 16
          WIDTH              = 80
          MAX-HEIGHT         = 16
@@ -261,7 +269,7 @@ PROCEDURE enable_UI :
                These statements here are based on the "Other 
                Settings" section of the widget Property Sheets.
 ------------------------------------------------------------------------------*/
-  ENABLE btnCreate btnUpdate btnDelete 
+  ENABLE IMAGE-2 btnCreate btnUpdate btnDelete 
       WITH FRAME DEFAULT-FRAME IN WINDOW C-Win.
   {&OPEN-BROWSERS-IN-QUERY-DEFAULT-FRAME}
   VIEW C-Win.
